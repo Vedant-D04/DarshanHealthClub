@@ -5,74 +5,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us | Darshan Health Club</title>
+    <meta name="description"
+        content="Learn about Darshan Health Club's 40+ year legacy of fitness excellence in Mumbai.">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+    <!-- Header -->
     <header id="header">
         <div class="container">
             <nav>
-                <a href="index.html" class="logo"><i class="fas fa-dumbbell"></i> DARSHAN<span>HEALTH CLUB</span></a>
+                <a href="index.html" class="logo">
+                    <i class="fas fa-dumbbell"></i>
+                    DARSHAN <span>HEALTH CLUB</span>
+                </a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
                     <li><a href="facilities.html">Facilities</a></li>
                     <li><a href="membership.html">Membership</a></li>
                     <li><a href="programs.html">Programs</a></li>
                     <li><a href="tips.html">Tips</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="btn btn-primary btn-mobile-only">Join Now</a></li>
                 </ul>
-                <a href="contact.html" class="btn btn-primary" style="padding: 12px 24px; font-size: 16px;">Join Now</a>
+                <div style="display: flex; gap: 12px; align-items: center;">
+                    <a href="contact.html" class="btn btn-primary header-btn">Join Now</a>
+                    <button class="menu-toggle" aria-label="Toggle Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
 
-    <main class="section-padding" style="padding-top: 180px;">
-        <div class="container">
-            <div class="reveal">
-                <h1 class="text-gradient">OUR STORY</h1>
-                <p style="font-size: 24px; color: var(--text-muted); margin-bottom: 60px;">Building champions and
-                    healthy lifestyles since 1983.</p>
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="reveal">OUR STORY</h1>
+                <p class="reveal">Building champions and healthy lifestyles since 1983</p>
             </div>
+        </section>
 
-            <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
-                <div class="reveal" style="transition-delay: 0.2s;">
-                    <p style="margin-bottom: 24px;">Darshan Health Club was established in 1983 with a single goal: to
-                        provide the best fitness instruction in Mumbai. Founded by **Mr. Darshan Aurora**, a celebrated
-                        bodybuilder and IBFF National Silver medalist, the club has been a landmark in the fitness
-                        community for over 40 years.</p>
-                    <p style="margin-bottom: 24px;">Today, the club is personally supervised by Mr. India Darshan Aurora
-                        and **Physical Culturist Siddharth Aurora**, ensuring that every member receives expert guidance
-                        tailored to their physiological needs.</p>
-                    <div class="glass glass-card" style="margin-top: 40px; border-left: 4px solid var(--primary);">
-                        <p style="font-style: italic;">"We don't just provide equipment; we provide the knowledge and
-                            environment needed for real, lasting transformation."</p>
+        <!-- About Content -->
+        <section class="section">
+            <div class="container">
+                <div class="grid-2">
+                    <div class="reveal">
+                        <h2><span class="gradient-text">A Legacy of Excellence</span></h2>
+                        <p>Darshan Health Club was established in 1983 with a single goal: to provide the best fitness
+                            instruction in Mumbai. Founded by <strong>Mr. Darshan Aurora</strong>, a celebrated
+                            bodybuilder and IBFF National Silver Medalist, the club has been a landmark in the fitness
+                            community for over 40 years.</p>
+                        <p>Today, the club is personally supervised by Mr. India Darshan Aurora and <strong>Physical
+                                Culturist Siddharth Aurora</strong>, ensuring that every member receives expert guidance
+                            tailored to their physiological needs.</p>
+                        <div class="glass glass-card" style="margin-top: 24px; border-left: 4px solid var(--primary);">
+                            <p style="font-style: italic; margin: 0;">"We don't just provide
+                                equipment; we provide the knowledge and environment needed for real, lasting
+                                transformation."</p>
+                        </div>
+                    </div>
+                    <div class="reveal">
+                        <div class="team-card" style="margin-bottom: 24px;">
+                            <img src="https://www.darshanhealthclub.com/images/darshan_aurora.jpg"
+                                alt="Mr. Darshan Aurora">
+                            <h3>DARSHAN AURORA</h3>
+                            <p class="role">Founder & Director</p>
+                            <p>1983-84 IBFF National Silver Medalist. Expert in physical culture and competitive
+                                bodybuilding training.</p>
+                        </div>
+                        <div class="team-card">
+                            <img src="https://www.darshanhealthclub.com/images/siddharth_aurora.jpg"
+                                alt="Mr. Siddharth Aurora">
+                            <h3>SIDDHARTH AURORA</h3>
+                            <p class="role">Director & Physical Culturist</p>
+                            <p>Specializes in biomechanics, functional training, and high-performance nutrition
+                                planning.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="reveal" style="transition-delay: 0.4s;">
-                    <div class="glass glass-card" style="margin-bottom: 32px;">
-                        <h3>DARSHAN AURORA</h3>
-                        <p style="color: var(--text-muted); margin-bottom: 12px;">Founder & Director</p>
-                        <p>1983-84 IBFF National Silver Medalist. Expert in physical culture and competitive
-                            bodybuilding training.</p>
+            </div>
+        </section>
+
+        <!-- Philosophy Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>Our <span class="gradient-text">Philosophy</span></h2>
+                    <p>What makes Darshan Health Club different</p>
+                </div>
+                <div class="grid" style="max-width: 900px; margin: 0 auto;">
+                    <div class="glass glass-card reveal text-center">
+                        <i class="fas fa-brain"
+                            style="font-size: 2rem; color: var(--primary); margin-bottom: 16px;"></i>
+                        <h3>SCIENTIFIC APPROACH</h3>
+                        <p>Every workout and nutrition plan is based on proven scientific principles for maximum
+                            effectiveness.</p>
                     </div>
-                    <div class="glass glass-card">
-                        <h3>SIDDHARTH AURORA</h3>
-                        <p style="color: var(--text-muted); margin-bottom: 12px;">Director & Physical Culturist</p>
-                        <p>Specializes in biomechanics, functional training, and high-performance nutrition planning.
+                    <div class="glass glass-card reveal text-center">
+                        <i class="fas fa-user-check"
+                            style="font-size: 2rem; color: var(--primary); margin-bottom: 16px;"></i>
+                        <h3>PERSONAL ATTENTION</h3>
+                        <p>Each member receives individualized guidance regardless of their schedule or fitness level.
                         </p>
                     </div>
+                    <div class="glass glass-card reveal text-center">
+                        <i class="fas fa-heart"
+                            style="font-size: 2rem; color: var(--primary); margin-bottom: 16px;"></i>
+                        <h3>HOLISTIC WELLNESS</h3>
+                        <p>We focus on complete physical transformation—body, mind, and lifestyle habits.</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p style="text-align: center; color: var(--text-muted);">&copy; 2026 Darshan Health Club. Est. 1983.</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-dumbbell"></i>
+                        DARSHAN <span>HEALTH CLUB</span>
+                    </a>
+                    <p style="margin-top: 16px;">Mumbai's premier fitness destination since 1983.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>QUICK LINKS</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="facilities.html">Facilities</a>
+                    <a href="membership.html">Membership</a>
+                    <a href="programs.html">Programs</a>
+                </div>
+                <div class="footer-column">
+                    <h4>PROGRAMS</h4>
+                    <a href="programs.html">Weight Training</a>
+                    <a href="programs.html">Cardio Programs</a>
+                    <a href="programs.html">Personal Training</a>
+                    <a href="tips.html">Fitness Tips</a>
+                </div>
+                <div class="footer-column">
+                    <h4>CONTACT</h4>
+                    <a href="tel:9769558095"><i class="fas fa-phone" style="margin-right: 8px;"></i> 9769558095</a>
+                    <a href="mailto:darshanhealthclub@gmail.com"><i class="fas fa-envelope"
+                            style="margin-right: 8px;"></i> Email Us</a>
+                    <a href="contact.html"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Andheri
+                        West</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Darshan Health Club. Established 1983. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 

@@ -5,79 +5,144 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Facilities | Darshan Health Club</title>
+    <meta name="description"
+        content="World-class gym facilities with imported equipment at Darshan Health Club Mumbai.">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+    <!-- Header -->
     <header id="header">
         <div class="container">
             <nav>
-                <a href="index.html" class="logo"><i class="fas fa-dumbbell"></i> DARSHAN<span>HEALTH CLUB</span></a>
+                <a href="index.html" class="logo">
+                    <i class="fas fa-dumbbell"></i>
+                    DARSHAN <span>HEALTH CLUB</span>
+                </a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
-                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="facilities.html" class="active">Facilities</a></li>
                     <li><a href="membership.html">Membership</a></li>
                     <li><a href="programs.html">Programs</a></li>
                     <li><a href="tips.html">Tips</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="btn btn-primary btn-mobile-only">Join Now</a></li>
                 </ul>
-                <a href="contact.html" class="btn btn-primary" style="padding: 12px 24px; font-size: 16px;">Join Now</a>
+                <div style="display: flex; gap: 12px; align-items: center;">
+                    <a href="contact.html" class="btn btn-primary header-btn">Join Now</a>
+                    <button class="menu-toggle" aria-label="Toggle Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
 
-    <main class="section-padding" style="padding-top: 180px;">
-        <div class="container">
-            <div class="reveal">
-                <h1 class="text-gradient">WORLD-CLASS FACILITIES</h1>
-                <p style="font-size: 24px; color: var(--text-muted); margin-bottom: 60px;">Equipped with high-tech
-                    imported machines and expert supervision.</p>
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="reveal">WORLD-CLASS FACILITIES</h1>
+                <p class="reveal">Equipped with high-tech imported machines and expert supervision</p>
             </div>
+        </section>
 
-            <div class="grid">
-                <!-- Gym -->
-                <div class="glass glass-card reveal">
-                    <div
-                        style="height: 200px; background: url('https://www.darshanhealthclub.com/images/facility_gym.jpg') center/cover; border-radius: 8px; margin-bottom: 24px;">
+        <!-- Facilities Grid -->
+        <section class="section">
+            <div class="container">
+                <div class="services-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="service-card reveal">
+                        <div class="service-card-image" style="background-image: url('equipment.jpg'); height: 220px;">
+                        </div>
+                        <div class="service-card-content">
+                            <h3>ELITE GYM</h3>
+                            <p>Hi-tech imported strength training machines designed for body toning, shaping, and
+                                improved bone density. Personally supervised to ensure correct posture and safety.</p>
+                        </div>
                     </div>
-                    <h3>ELITE GYM</h3>
-                    <p>Hi-tech imported strength training machines designed for body toning, shaping, and improved bone
-                        density. Personally supervised to ensure correct posture and safety.</p>
-                </div>
-                <!-- Cardio -->
-                <div class="glass glass-card reveal">
-                    <div
-                        style="height: 200px; background: url('https://www.darshanhealthclub.com/images/facility_cardio.jpg') center/cover; border-radius: 8px; margin-bottom: 24px;">
+                    <div class="service-card reveal">
+                        <div class="service-card-image" style="background-image: url('equipment2.jpg'); height: 220px;">
+                        </div>
+                        <div class="service-card-content">
+                            <h3>CARDIO CENTER</h3>
+                            <p>Features latest treadmills, recumbent bikes, upright bikes, and elliptical cross
+                                trainers. Ideal for fat loss, increasing stamina, and heart health.</p>
+                        </div>
                     </div>
-                    <h3>CARDIO CENTER</h3>
-                    <p>Features latest treadmills, recumbent bikes, upright bikes, and elliptical cross trainers. Ideal
-                        for fat loss, increasing stamina, and heart health.</p>
-                </div>
-                <!-- PT -->
-                <div class="glass glass-card reveal">
-                    <i class="fas fa-user-check" style="font-size: 40px; color: var(--primary); margin: 20px 0;"></i>
-                    <h3>PERSONAL TRAINING</h3>
-                    <p>One-on-one instruction from certified experts. We provide continuous motivation and
-                        scientifically backed routines to guarantee results.</p>
-                </div>
-                <!-- Functional -->
-                <div class="glass glass-card reveal">
-                    <i class="fas fa-bolt" style="font-size: 40px; color: var(--primary); margin: 20px 0;"></i>
-                    <h3>FUNCTIONAL TRAINING</h3>
-                    <p>Dynamic exercise programs using functional trainers that work every single body part. Improve
-                        agility, mobility, and real-world strength.</p>
+                    <div class="service-card reveal">
+                        <div class="service-card-image" style="background-image: url('dumbelrack.jpg'); height: 220px;">
+                        </div>
+                        <div class="service-card-content">
+                            <h3>PERSONAL TRAINING</h3>
+                            <p>One-on-one instruction from certified experts. We provide continuous motivation and
+                                scientifically backed routines to guarantee results.</p>
+                        </div>
+                    </div>
+                    <div class="service-card reveal">
+                        <div class="service-card-image" style="background-image: url('reception.jpg'); height: 220px;">
+                        </div>
+                        <div class="service-card-content">
+                            <h3>FUNCTIONAL TRAINING</h3>
+                            <p>Dynamic exercise programs using functional trainers that work every single body part.
+                                Improve agility, mobility, and real-world strength.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="reveal">EXPERIENCE OUR FACILITIES</h2>
+                <p class="reveal">Schedule a visit and see our equipment in action</p>
+                <a href="contact.html" class="btn btn-outline-light reveal">Contact Us</a>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p style="text-align: center; color: var(--text-muted);">&copy; 2026 Darshan Health Club. Est. 1983.</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-dumbbell"></i>
+                        DARSHAN <span>HEALTH CLUB</span>
+                    </a>
+                    <p style="margin-top: 16px;">Mumbai's premier fitness destination since 1983.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>QUICK LINKS</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="facilities.html">Facilities</a>
+                    <a href="membership.html">Membership</a>
+                    <a href="programs.html">Programs</a>
+                </div>
+                <div class="footer-column">
+                    <h4>PROGRAMS</h4>
+                    <a href="programs.html">Weight Training</a>
+                    <a href="programs.html">Cardio Programs</a>
+                    <a href="programs.html">Personal Training</a>
+                    <a href="tips.html">Fitness Tips</a>
+                </div>
+                <div class="footer-column">
+                    <h4>CONTACT</h4>
+                    <a href="tel:9769558095"><i class="fas fa-phone" style="margin-right: 8px;"></i> 9769558095</a>
+                    <a href="mailto:darshanhealthclub@gmail.com"><i class="fas fa-envelope"
+                            style="margin-right: 8px;"></i> Email Us</a>
+                    <a href="contact.html"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Andheri
+                        West</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Darshan Health Club. Established 1983. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 

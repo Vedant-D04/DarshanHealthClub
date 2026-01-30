@@ -5,62 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Darshan Health Club</title>
+    <meta name="description" content="Get in touch with Darshan Health Club in Andheri West, Mumbai.">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            gap: 60px;
-        }
-
-        .form-group {
-            margin-bottom: 24px;
-        }
-
-        input,
-        textarea {
-            width: 100%;
-            padding: 16px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid var(--glass-border);
-            color: white;
-            border-radius: 8px;
-            font-family: 'Outfit', sans-serif;
-            font-size: 16px;
-            transition: var(--transition);
-        }
-
-        input:focus,
-        textarea:focus {
-            outline: none;
-            border-color: var(--primary);
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            font-size: 12px;
-            letter-spacing: 1px;
-        }
-
-        @media (max-width: 992px) {
-            .contact-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
 </head>
 
 <body>
+    <!-- Header -->
     <header id="header">
         <div class="container">
             <nav>
-                <a href="index.html" class="logo"><i class="fas fa-dumbbell"></i> DARSHAN<span>HEALTH CLUB</span></a>
+                <a href="index.html" class="logo">
+                    <i class="fas fa-dumbbell"></i>
+                    DARSHAN <span>HEALTH CLUB</span>
+                </a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -68,90 +26,159 @@
                     <li><a href="membership.html">Membership</a></li>
                     <li><a href="programs.html">Programs</a></li>
                     <li><a href="tips.html">Tips</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                    <li><a href="contact.html" class="btn btn-primary btn-mobile-only">Join Now</a></li>
                 </ul>
-                <a href="contact.html" class="btn btn-primary" style="padding: 12px 24px; font-size: 16px;">Join Now</a>
+                <div style="display: flex; gap: 12px; align-items: center;">
+                    <a href="contact.html" class="btn btn-primary header-btn">Join Now</a>
+                    <button class="menu-toggle" aria-label="Toggle Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
 
-    <main class="section-padding" style="padding-top: 180px;">
-        <div class="container">
-            <div class="reveal">
-                <h1 class="text-gradient">GET IN TOUCH</h1>
-                <p style="font-size: 24px; color: var(--text-muted); margin-bottom: 60px;">Start your fitness journey
-                    today. Visit us in Andheri West.</p>
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="reveal">GET IN TOUCH</h1>
+                <p class="reveal">Start your fitness journey today. Visit us in Andheri West.</p>
             </div>
+        </section>
 
-            <div class="contact-grid">
-                <!-- Info Side -->
-                <div class="reveal">
-                    <div style="margin-bottom: 48px;">
-                        <h3 style="color: var(--primary); margin-bottom: 16px;">LOCATION</h3>
-                        <p style="font-size: 18px; line-height: 1.6;">
-                            Kanchanganga Bldg., Next to 4 Bungalows Gurudwara<br>
-                            & D.N. Nagar Metro, J. P. Road,<br>
-                            Andheri (West), Mumbai - 400053
-                        </p>
-                    </div>
-
-                    <div style="margin-bottom: 48px;">
-                        <h3 style="color: var(--primary); margin-bottom: 16px;">HOURS</h3>
-                        <div
-                            style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px; margin-bottom: 12px;">
-                            <span>Monday - Saturday</span>
-                            <span>6:00 AM - 10:00 PM</span>
+        <!-- Contact Content -->
+        <section class="section">
+            <div class="container">
+                <div class="grid-2" style="gap: 60px;">
+                    <!-- Info Side -->
+                    <div class="reveal">
+                        <div style="margin-bottom: 40px;">
+                            <h3
+                                style="color: var(--primary); margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+                                <i class="fas fa-map-marker-alt" style="color: var(--primary);"></i> LOCATION
+                            </h3>
+                            <p style="line-height: 1.8;">
+                                Kanchanganga Bldg., Next to 4 Bungalows Gurudwara<br>
+                                & D.N. Nagar Metro, J. P. Road,<br>
+                                Andheri (West), Mumbai - 400053
+                            </p>
                         </div>
-                        <div
-                            style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 8px;">
-                            <span>Sunday</span>
-                            <span>7:00 AM - 11:00 AM</span>
-                        </div>
-                    </div>
 
-                    <div>
-                        <h3 style="color: var(--primary); margin-bottom: 16px;">CONTACT</h3>
-                        <p style="font-size: 18px; margin-bottom: 8px;"><i class="fas fa-phone"
-                                style="margin-right: 12px; width: 20px;"></i> 9769558095 / 9833887631</p>
-                        <p style="font-size: 18px;"><i class="fas fa-envelope"
-                                style="margin-right: 12px; width: 20px;"></i> darshanhealthclub@gmail.com</p>
-                    </div>
-                </div>
-
-                <!-- Form Side -->
-                <div class="glass glass-card reveal">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" placeholder="John Doe" required>
-                        </div>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
-                            <div class="form-group">
-                                <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" placeholder="+91 98765 43210" required>
+                        <div style="margin-bottom: 40px;">
+                            <h3
+                                style="color: var(--primary); margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+                                <i class="fas fa-clock" style="color: var(--primary);"></i> HOURS
+                            </h3>
+                            <div
+                                style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 12px;">
+                                <span>Monday - Saturday</span>
+                                <span style="font-weight: 600;">6:00 AM - 10:00 PM</span>
                             </div>
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" placeholder="john@example.com" required>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>Sunday</span>
+                                <span style="font-weight: 600;">7:00 AM - 11:00 AM</span>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" rows="5" placeholder="I'm interested in joining because..."
-                                required></textarea>
+
+                        <div>
+                            <h3
+                                style="color: var(--primary); margin-bottom: 12px; display: flex; align-items: center; gap: 10px;">
+                                <i class="fas fa-phone" style="color: var(--primary);"></i> CONTACT
+                            </h3>
+                            <p style="margin-bottom: 8px;">
+                                <a href="tel:9769558095" style="color: var(--text-cream);">
+                                    <i class="fas fa-phone" style="margin-right: 10px; color: var(--primary);"></i>
+                                    9769558095
+                                </a>
+                            </p>
+                            <p style="margin-bottom: 8px;">
+                                <a href="tel:9833887631" style="color: var(--text-cream);">
+                                    <i class="fas fa-phone" style="margin-right: 10px; color: var(--primary);"></i>
+                                    9833887631
+                                </a>
+                            </p>
+                            <p>
+                                <a href="mailto:darshanhealthclub@gmail.com" style="color: var(--text-cream);">
+                                    <i class="fas fa-envelope" style="margin-right: 10px; color: var(--primary);"></i>
+                                    darshanhealthclub@gmail.com
+                                </a>
+                            </p>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
-                    </form>
+                    </div>
+
+                    <!-- Form Side -->
+                    <div class="glass glass-card reveal" style="padding: 32px;">
+                        <h3 style="margin-bottom: 24px;">SEND US A MESSAGE</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" placeholder="John Doe" required>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                                <div class="form-group">
+                                    <label for="phone">Phone Number</label>
+                                    <input type="tel" id="phone" placeholder="+91 98765 43210" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" placeholder="john@example.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" rows="4" placeholder="I'm interested in joining because..."
+                                    required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p style="text-align: center; color: var(--text-muted);">&copy; 2026 Darshan Health Club. Est. 1983.</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-dumbbell"></i>
+                        DARSHAN <span>HEALTH CLUB</span>
+                    </a>
+                    <p style="margin-top: 16px;">Mumbai's premier fitness destination since 1983.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>QUICK LINKS</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="facilities.html">Facilities</a>
+                    <a href="membership.html">Membership</a>
+                    <a href="programs.html">Programs</a>
+                </div>
+                <div class="footer-column">
+                    <h4>PROGRAMS</h4>
+                    <a href="programs.html">Weight Training</a>
+                    <a href="programs.html">Cardio Programs</a>
+                    <a href="programs.html">Personal Training</a>
+                    <a href="tips.html">Fitness Tips</a>
+                </div>
+                <div class="footer-column">
+                    <h4>CONTACT</h4>
+                    <a href="tel:9769558095"><i class="fas fa-phone" style="margin-right: 8px;"></i> 9769558095</a>
+                    <a href="mailto:darshanhealthclub@gmail.com"><i class="fas fa-envelope"
+                            style="margin-right: 8px;"></i> Email Us</a>
+                    <a href="contact.html"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Andheri
+                        West</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Darshan Health Club. Established 1983. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 

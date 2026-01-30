@@ -5,97 +5,183 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Membership | Darshan Health Club</title>
+    <meta name="description" content="Flexible membership plans at Darshan Health Club Mumbai.">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+    <!-- Header -->
     <header id="header">
         <div class="container">
             <nav>
-                <a href="index.html" class="logo"><i class="fas fa-dumbbell"></i> DARSHAN<span>HEALTH CLUB</span></a>
+                <a href="index.html" class="logo">
+                    <i class="fas fa-dumbbell"></i>
+                    DARSHAN <span>HEALTH CLUB</span>
+                </a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="facilities.html">Facilities</a></li>
-                    <li><a href="membership.html">Membership</a></li>
+                    <li><a href="membership.html" class="active">Membership</a></li>
                     <li><a href="programs.html">Programs</a></li>
                     <li><a href="tips.html">Tips</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="btn btn-primary btn-mobile-only">Join Now</a></li>
                 </ul>
-                <a href="contact.html" class="btn btn-primary" style="padding: 12px 24px; font-size: 16px;">Join Now</a>
+                <div style="display: flex; gap: 12px; align-items: center;">
+                    <a href="contact.html" class="btn btn-primary header-btn">Join Now</a>
+                    <button class="menu-toggle" aria-label="Toggle Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
 
-    <main class="section-padding" style="padding-top: 180px;">
-        <div class="container">
-            <div class="reveal">
-                <h1 class="text-gradient">MEMBERSHIP PLANS</h1>
-                <p style="font-size: 24px; color: var(--text-muted); margin-bottom: 60px;">Flexible options designed to
-                    fit your lifestyle and fitness goals.</p>
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="reveal">MEMBERSHIP PLANS</h1>
+                <p class="reveal">Flexible options designed to fit your lifestyle and fitness goals</p>
             </div>
+        </section>
 
-            <div class="grid">
-                <div class="glass glass-card reveal">
-                    <h3>SINGLE PACKAGE</h3>
-                    <p style="margin-bottom: 24px;">Personalized access for individuals with dedicated supervision.</p>
-                    <ul style="list-style: none; color: var(--text-muted);">
-                        <li><i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i> Full Gym
-                            Access</li>
-                        <li><i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i> Nutritional
-                            Guidance</li>
-                    </ul>
+        <!-- Membership Plans -->
+        <section class="section">
+            <div class="container">
+                <div class="services-grid">
+                    <div class="service-card reveal">
+                        <div class="service-card-content" style="padding: 32px;">
+                            <i class="fas fa-user"
+                                style="font-size: 2rem; color: var(--primary); margin-bottom: 16px;"></i>
+                            <h3>SINGLE PACKAGE</h3>
+                            <p>Personalized access for individuals with dedicated supervision.</p>
+                            <ul style="list-style: none; margin: 16px 0; color: var(--text-muted); font-size: 0.9rem;">
+                                <li style="margin-bottom: 8px;"><i class="fas fa-check"
+                                        style="color: var(--primary); margin-right: 8px;"></i> Full Gym Access</li>
+                                <li style="margin-bottom: 8px;"><i class="fas fa-check"
+                                        style="color: var(--primary); margin-right: 8px;"></i> Nutritional Guidance
+                                </li>
+                                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i>
+                                    Personal Training</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-outline"
+                                style="width: 100%; margin-top: 16px;">Enquire Now</a>
+                        </div>
+                    </div>
+                    <div class="service-card reveal">
+                        <div class="service-card-content" style="padding: 32px;">
+                            <i class="fas fa-users"
+                                style="font-size: 2rem; color: var(--primary); margin-bottom: 16px;"></i>
+                            <h3>COUPLE & GROUP</h3>
+                            <p>Train together and stay motivated while saving on membership costs.</p>
+                            <ul style="list-style: none; margin: 16px 0; color: var(--text-muted); font-size: 0.9rem;">
+                                <li style="margin-bottom: 8px;"><i class="fas fa-check"
+                                        style="color: var(--primary); margin-right: 8px;"></i> Discounted Rates</li>
+                                <li style="margin-bottom: 8px;"><i class="fas fa-check"
+                                        style="color: var(--primary); margin-right: 8px;"></i> Shared Progress
+                                    Tracking</li>
+                                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i>
+                                    Flexible Scheduling</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-outline"
+                                style="width: 100%; margin-top: 16px;">Enquire Now</a>
+                        </div>
+                    </div>
+                    <div class="service-card reveal">
+                        <div class="service-card-content" style="padding: 32px;">
+                            <i class="fas fa-graduation-cap"
+                                style="font-size: 2rem; color: var(--primary); margin-bottom: 16px;"></i>
+                            <h3>STUDENT SPECIAL</h3>
+                            <p>Budget-friendly plans for students to prioritize health alongside studies.</p>
+                            <ul style="list-style: none; margin: 16px 0; color: var(--text-muted); font-size: 0.9rem;">
+                                <li style="margin-bottom: 8px;"><i class="fas fa-check"
+                                        style="color: var(--primary); margin-right: 8px;"></i> Valid ID Required
+                                </li>
+                                <li style="margin-bottom: 8px;"><i class="fas fa-check"
+                                        style="color: var(--primary); margin-right: 8px;"></i> All Facility Access
+                                </li>
+                                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i>
+                                    Special Discount</li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-outline"
+                                style="width: 100%; margin-top: 16px;">Enquire Now</a>
+                        </div>
+                    </div>
+                    <div class="service-card reveal" style="border: 2px solid var(--primary);">
+                        <div class="service-card-content" style="padding: 32px;">
+                            <span
+                                style="background: var(--primary); color: white; padding: 4px 12px; font-size: 0.7rem; font-weight: 600; border-radius: 2px; display: inline-block; margin-bottom: 16px;">RECOMMENDED</span>
+                            <i class="fas fa-building"
+                                style="font-size: 2rem; color: var(--primary); margin-bottom: 16px; display: block;"></i>
+                            <h3>CORPORATE PLANS</h3>
+                            <p>Boost employee productivity and stress relief with tailored corporate packages.</p>
+                            <a href="contact.html" class="btn btn-primary"
+                                style="width: 100%; margin-top: 16px;">Enquire Now</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="glass glass-card reveal">
-                    <h3>COUPLE & GROUP</h3>
-                    <p style="margin-bottom: 24px;">Train together and stay motivated while saving on membership costs.
+            </div>
+        </section>
+
+        <!-- Referral Section -->
+        <section class="section">
+            <div class="container">
+                <div class="glass glass-card text-center reveal"
+                    style="padding: 48px; max-width: 600px; margin: 0 auto;">
+                    <i class="fas fa-gift" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 20px;"></i>
+                    <h2 class="text-gradient">REFERRAL PROGRAM</h2>
+                    <p style="font-size: 1.1rem; font-weight: 600; color: var(--text-dark); margin: 16px 0;">REFER 1
+                        FRIEND = GET 1 MONTH FREE</p>
+                    <p class="text-muted">Invite your friends to Darshan Health Club and grow the community together.
                     </p>
-                    <ul style="list-style: none; color: var(--text-muted);">
-                        <li><i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i> Discounted
-                            Rates</li>
-                        <li><i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i> Shared
-                            Progress Tracking</li>
-                    </ul>
-                </div>
-                <div class="glass glass-card reveal">
-                    <h3>STUDENT SPECIAL</h3>
-                    <p style="margin-bottom: 24px;">Budget-friendly plans for students to prioritize health alongside
-                        studies.</p>
-                    <ul style="list-style: none; color: var(--text-muted);">
-                        <li><i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i> Valid ID
-                            Required</li>
-                        <li><i class="fas fa-check" style="color: var(--primary); margin-right: 10px;"></i> All Facility
-                            Access</li>
-                    </ul>
-                </div>
-                <div class="glass glass-card reveal" style="border-color: var(--primary);">
-                    <div
-                        style="background: var(--primary); color: white; padding: 4px 12px; border-radius: 4px; font-size: 12px; display: inline-block; margin-bottom: 12px;">
-                        RECOMMENDED</div>
-                    <h3>CORPORATE PLANS</h3>
-                    <p style="margin-bottom: 24px;">Boost employee productivity and stress relief with tailored
-                        corporate packages.</p>
-                    <a href="contact.html" class="btn btn-primary" style="width: 100%;">Enquire Now</a>
                 </div>
             </div>
-
-            <div class="reveal"
-                style="margin-top: 80px; text-align: center; background: rgba(230,230,230,0.05); padding: 60px; border-radius: 20px;">
-                <h2 class="text-gradient">REFERRAL PROGRAM</h2>
-                <p style="font-size: 20px; color: var(--text-white); margin-bottom: 32px;">REFER 1 FRIEND = GET 1 MONTH
-                    MEMBERSHIP FREE</p>
-                <p style="color: var(--text-muted);">Invite your friends to Darshan Health Club and grow the community
-                    together.</p>
-            </div>
-        </div>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p style="text-align: center; color: var(--text-muted);">&copy; 2026 Darshan Health Club. Est. 1983.</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-dumbbell"></i>
+                        DARSHAN <span>HEALTH CLUB</span>
+                    </a>
+                    <p style="margin-top: 16px;">Mumbai's premier fitness destination since 1983.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>QUICK LINKS</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="facilities.html">Facilities</a>
+                    <a href="membership.html">Membership</a>
+                    <a href="programs.html">Programs</a>
+                </div>
+                <div class="footer-column">
+                    <h4>PROGRAMS</h4>
+                    <a href="programs.html">Weight Training</a>
+                    <a href="programs.html">Cardio Programs</a>
+                    <a href="programs.html">Personal Training</a>
+                    <a href="tips.html">Fitness Tips</a>
+                </div>
+                <div class="footer-column">
+                    <h4>CONTACT</h4>
+                    <a href="tel:9769558095"><i class="fas fa-phone" style="margin-right: 8px;"></i> 9769558095</a>
+                    <a href="mailto:darshanhealthclub@gmail.com"><i class="fas fa-envelope"
+                            style="margin-right: 8px;"></i> Email Us</a>
+                    <a href="contact.html"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Andheri
+                        West</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Darshan Health Club. Established 1983. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 

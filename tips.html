@@ -5,106 +5,166 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fitness Tips | Darshan Health Club</title>
+    <meta name="description" content="Expert nutrition and fitness tips from Darshan Health Club Mumbai.">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
+    <!-- Header -->
     <header id="header">
         <div class="container">
             <nav>
-                <a href="index.html" class="logo"><i class="fas fa-dumbbell"></i> DARSHAN<span>HEALTH CLUB</span></a>
+                <a href="index.html" class="logo">
+                    <i class="fas fa-dumbbell"></i>
+                    DARSHAN <span>HEALTH CLUB</span>
+                </a>
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="facilities.html">Facilities</a></li>
                     <li><a href="membership.html">Membership</a></li>
                     <li><a href="programs.html">Programs</a></li>
-                    <li><a href="tips.html">Tips</a></li>
+                    <li><a href="tips.html" class="active">Tips</a></li>
                     <li><a href="contact.html">Contact</a></li>
+                    <li><a href="contact.html" class="btn btn-primary btn-mobile-only">Join Now</a></li>
                 </ul>
-                <a href="contact.html" class="btn btn-primary" style="padding: 12px 24px; font-size: 16px;">Join Now</a>
+                <div style="display: flex; gap: 12px; align-items: center;">
+                    <a href="contact.html" class="btn btn-primary header-btn">Join Now</a>
+                    <button class="menu-toggle" aria-label="Toggle Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
 
-    <main class="section-padding" style="padding-top: 180px;">
-        <div class="container">
-            <div class="reveal">
-                <h1 class="text-gradient">EXPERT TIPS</h1>
-                <p style="font-size: 24px; color: var(--text-muted); margin-bottom: 60px;">Nutrition and mindset advice
-                    to maximize your results.</p>
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <h1 class="reveal">EXPERT TIPS</h1>
+                <p class="reveal">Nutrition and mindset advice to maximize your results</p>
             </div>
+        </section>
 
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 80px;">
-                <!-- Nutrition -->
-                <div class="reveal">
-                    <h2 class="text-gradient" style="font-size: 32px; margin-bottom: 40px;">NUTRITION PHILOSOPHY</h2>
-                    <div class="tip-item">
-                        <h4><i class="fas fa-apple-whole" style="color: var(--primary);"></i> Chew Your Calories</h4>
-                        <p>Avoid fruit juices; get nutrition from solid food for better satiety and fiber intake.</p>
+        <!-- Tips Content -->
+        <section class="section">
+            <div class="container">
+                <div class="grid-2" style="align-items: start;">
+                    <!-- Nutrition -->
+                    <div class="reveal">
+                        <h2 class="text-gradient" style="margin-bottom: 24px;">NUTRITION PHILOSOPHY</h2>
+                        <div class="tip-item">
+                            <h4><i class="fas fa-apple-whole"></i> Chew Your Calories</h4>
+                            <p>Avoid fruit juices; get nutrition from solid food for better satiety and fiber intake.
+                            </p>
+                        </div>
+                        <div class="tip-item">
+                            <h4><i class="fas fa-wheat-awn"></i> Fiber Intake</h4>
+                            <p>Aim for 25 to 35 grams of fiber per day to support digestion and metabolic health.</p>
+                        </div>
+                        <div class="tip-item">
+                            <h4><i class="fas fa-egg"></i> Protein Snacking</h4>
+                            <p>Eat small protein portions between meals to maintain muscle and stay full longer.</p>
+                        </div>
+                        <div class="tip-item">
+                            <h4><i class="fas fa-bolt"></i> Metabolism Boost</h4>
+                            <p>Use red pepper and green tea as natural stimulants to kickstart your daily metabolism.
+                            </p>
+                        </div>
                     </div>
-                    <div class="tip-item">
-                        <h4><i class="fas fa-wheat-awn" style="color: var(--primary);"></i> Fiber Intake</h4>
-                        <p>Aim for 25 to 35 grams of fiber per day to support digestion and metabolic health.</p>
-                    </div>
-                    <div class="tip-item">
-                        <h4><i class="fas fa-egg" style="color: var(--primary);"></i> Protein Snacking</h4>
-                        <p>Eat small protein portions between meals to maintain muscle and stay full longer.</p>
-                    </div>
-                    <div class="tip-item">
-                        <h4><i class="fas fa-bolt" style="color: var(--primary);"></i> Metabolism Boost</h4>
-                        <p>Use red pepper and green tea as natural stimulants to kickstart your daily metabolism.</p>
-                    </div>
-                </div>
 
-                <!-- Mindset -->
-                <div class="reveal">
-                    <h2 class="text-gradient" style="font-size: 32px; margin-bottom: 40px;">MINDSET & HABITS</h2>
-                    <div class="tip-item">
-                        <h4><i class="fas fa-brain" style="color: var(--primary);"></i> Manage Cravings</h4>
-                        <p>Most cravings last only 10 minutes; distract yourself with music or a brief hobby.</p>
-                    </div>
-                    <div class="tip-item">
-                        <h4><i class="fas fa-list-check" style="color: var(--primary);"></i> Distraction Strategy</h4>
-                        <p>Keep a list of productive tasks to do instead of eating when you feel tempted.</p>
-                    </div>
-                    <div class="tip-item">
-                        <h4><i class="fas fa-shield-heart" style="color: var(--primary);"></i> Stress Resilience</h4>
-                        <p>Exercise is a powerful tool to alleviate boredom and emotional stress naturally.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Benefits -->
-            <div class="reveal"
-                style="margin-top: 100px; padding-top: 80px; border-top: 1px solid var(--glass-border);">
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
-                    <div>
-                        <h3 style="font-size: 22px; color: white;">WHY EXERCISE?</h3>
-                        <p style="color: var(--text-muted); font-size: 15px;">A vital investment for blood pressure,
-                            cholesterol, and heart disease prevention.</p>
-                    </div>
-                    <div>
-                        <h3 style="font-size: 22px; color: white;">THE RESULTS</h3>
-                        <p style="color: var(--text-muted); font-size: 15px;">Expect weight loss, improved skin
-                            tone, bone density, and flexibility.</p>
-                    </div>
-                    <div>
-                        <h3 style="font-size: 22px; color: white;">WELLNESS</h3>
-                        <p style="color: var(--text-muted); font-size: 15px;">Enhanced capacity to manage physical
-                            and emotional day-to-day stress.</p>
+                    <!-- Mindset -->
+                    <div class="reveal">
+                        <h2 class="text-gradient" style="margin-bottom: 24px;">MINDSET & HABITS</h2>
+                        <div class="tip-item">
+                            <h4><i class="fas fa-brain"></i> Manage Cravings</h4>
+                            <p>Most cravings last only 10 minutes; distract yourself with music or a brief hobby.</p>
+                        </div>
+                        <div class="tip-item">
+                            <h4><i class="fas fa-list-check"></i> Distraction Strategy</h4>
+                            <p>Keep a list of productive tasks to do instead of eating when you feel tempted.</p>
+                        </div>
+                        <div class="tip-item">
+                            <h4><i class="fas fa-shield-heart"></i> Stress Resilience</h4>
+                            <p>Exercise is a powerful tool to alleviate boredom and emotional stress naturally.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Benefits Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>WHY EXERCISE MATTERS</h2>
+                    <p>The science-backed benefits of regular physical activity</p>
+                </div>
+                <div class="grid">
+                    <div class="glass glass-card reveal text-center">
+                        <i class="fas fa-heart"
+                            style="font-size: 2rem; color: var(--primary); margin-bottom: 16px;"></i>
+                        <h3>HEART HEALTH</h3>
+                        <p>A vital investment for blood pressure, cholesterol, and heart disease prevention.</p>
+                    </div>
+                    <div class="glass glass-card reveal text-center">
+                        <i class="fas fa-weight-scale"
+                            style="font-size: 2rem; color: var(--primary); margin-bottom: 16px;"></i>
+                        <h3>VISIBLE RESULTS</h3>
+                        <p>Expect weight loss, improved skin tone, bone density, and flexibility.</p>
+                    </div>
+                    <div class="glass glass-card reveal text-center">
+                        <i class="fas fa-spa" style="font-size: 2rem; color: var(--primary); margin-bottom: 16px;"></i>
+                        <h3>WELLNESS</h3>
+                        <p>Enhanced capacity to manage physical and emotional day-to-day stress.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p style="text-align: center; color: var(--text-muted);">&copy; 2026 Darshan Health Club. Est. 1983.</p>
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <i class="fas fa-dumbbell"></i>
+                        DARSHAN <span>HEALTH CLUB</span>
+                    </a>
+                    <p style="margin-top: 16px;">Mumbai's premier fitness destination since 1983.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>QUICK LINKS</h4>
+                    <a href="about.html">About Us</a>
+                    <a href="facilities.html">Facilities</a>
+                    <a href="membership.html">Membership</a>
+                    <a href="programs.html">Programs</a>
+                </div>
+                <div class="footer-column">
+                    <h4>PROGRAMS</h4>
+                    <a href="programs.html">Weight Training</a>
+                    <a href="programs.html">Cardio Programs</a>
+                    <a href="programs.html">Personal Training</a>
+                    <a href="tips.html">Fitness Tips</a>
+                </div>
+                <div class="footer-column">
+                    <h4>CONTACT</h4>
+                    <a href="tel:9769558095"><i class="fas fa-phone" style="margin-right: 8px;"></i> 9769558095</a>
+                    <a href="mailto:darshanhealthclub@gmail.com"><i class="fas fa-envelope"
+                            style="margin-right: 8px;"></i> Email Us</a>
+                    <a href="contact.html"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i> Andheri
+                        West</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Darshan Health Club. Established 1983. All Rights Reserved.</p>
+            </div>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 
