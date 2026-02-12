@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header - Darshan HEALTH CLUB</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Figtree:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            /* Colors - Cult.fit Inspired Theme */
+            --bg-dark: #0a0e15;
+            --bg-card: #151922;
+            --bg-card-hover: #1d232e;
+            --bg-elevated: #242b38;
+
+            /* Accent Colors - Cult.fit Exact Palette */
+            --primary: #7FFFD4;
+            --primary-light: #90EE90;
+            --primary-glow: rgba(127, 255, 212, 0.3);
+            --accent-mint: #7FFFD4;
+            --accent-lime: #C0E080;
+            --accent-yellow: #F0E68C;
+            --gradient-start: #7FFFD4;
+            --gradient-middle: #C0E080;
+            --gradient-end: #F0E68C;
+
+            /* Text Colors */
+            --text-white: #ffffff;
+            --text-cream: #f0f4f8;
+            --text-light: rgba(255, 255, 255, 0.9);
+            --text-muted: rgba(255, 255, 255, 0.6);
+            --text-dim: rgba(255, 255, 255, 0.4);
+
+            /* Borders & Shadows */
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 255, 255, 0.15);
+            --glow: 0 0 40px rgba(127, 255, 212, 0.2);
+
+            /* Typography */
+            --font-heading: 'Bricolage Grotesque', sans-serif;
+            --font-body: 'Figtree', sans-serif;
+
+            /* Transitions */
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-dark) !important;
+            color: var(--text-cream) !important;
+            font-size: 16px;
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header / Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 16px 0;
+            background: transparent;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            background: rgba(6, 0, 16, 0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            white-space: nowrap;
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--text-white);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            color: var(--primary);
+            font-size: 1.4rem;
+        }
+
+        .logo span {
+            font-weight: 400;
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-left: 4px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 36px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-light);
+            position: relative;
+            padding: 8px 0;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--text-white);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--gradient-end));
+            transition: var(--transition);
+        }
+
+        
+        .nav-links li {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: rgba(10, 14, 21, 0.98);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px 0;
+            min-width: 220px;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 1100;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
+            list-style: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-links li:hover .dropdown-menu {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .dropdown-menu a {
+            padding: 12px 24px;
+            display: block;
+            color: var(--text-light) !important;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition) !important;
+            white-space: nowrap;
+            letter-spacing: 0.01em;
+        }
+
+        .dropdown-menu a::after {
+            display: none !important;
+        }
+
+        .dropdown-menu a:hover {
+            background: rgba(127, 255, 212, 0.08);
+            color: var(--primary) !important;
+            padding-left: 30px;
+        }
+
+        /* Mobile Adjustments for Dropdown */
+        @media (max-width: 992px) {
+            .header-btn {
+                display: none !important;
+            }
+
+            .btn-mobile-only {
+                display: inline-flex !important;
+                width: 100%;
+                margin-top: 20px;
+                justify-content: center;
+            }
+            .dropdown-menu {
+                position: static;
+                transform: none;
+                visibility: visible;
+                opacity: 1;
+                background: transparent;
+                border: none;
+                box-shadow: none;
+                padding: 10px 0 0 20px;
+                min-width: unset;
+                display: none;
+            }
+
+            .nav-links li:hover .dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-menu a {
+                padding: 8px 0;
+                font-size: 1rem;
+            }
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-white);
+            cursor: pointer;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #7FFFD4, #C0E080, #F0E68C);
+            color: #0a0e15;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(127, 255, 212, 0.3);
+        }
+        .btn-mobile-only {
+            display: none;
+        }
+
+        .header-btn {
+            display: inline-flex;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(127, 255, 212, 0.4);
+        }
+
+        .btn-mobile-only {
+            display: none;
+        }
+
+        .header-btn {
+            display: inline-flex;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .header-btn {
+                display: none !important;
+            }
+
+            .btn-mobile-only {
+                display: inline-flex !important;
+                width: 100%;
+                margin-top: 20px;
+                justify-content: center;
+            }
+            .menu-toggle {
+                display: block;
+            }
+
+            .header-btn {
+                display: none !important;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 80%;
+                max-width: 350px;
+                height: 100vh;
+                background: var(--bg-dark);
+                flex-direction: column;
+                padding: 100px 40px 40px;
+                gap: 24px;
+                box-shadow: -20px 0 50px rgba(0, 0, 0, 0.5);
+                transition: var(--transition);
+                border-left: 1px solid var(--border);
+            }
+
+            .nav-links.active {
+                right: 0;
+            }
+
+            .nav-links a {
+                font-size: 1.1rem;
+                padding: 12px 0;
+            }
+
+            .btn-mobile-only {
+                display: inline-flex !important;
+                width: 100%;
+                margin-top: 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo { font-size: 1.2rem; gap: 6px; }
+            .logo i { font-size: 1.1rem; }
+            .logo span { font-size: 0.85rem; }
+            .container {
+                padding: 0 16px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <nav>
+                <a href="/" class="logo">
+                    <i class="fas fa-dumbbell"></i>
+                    DARSHAN HEALTH CLUB
+                </a>
+                <ul class="nav-links">
+                    <li><a href="/home-2/" class="active">Home</a></li>
+                    <li><a href="/about-3/">About</a></li>
+                    
+                    <li>
+                        <a href="/Facilites/">Facilities <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/elite-gym/">Elite Gym</a></li>
+                            <li><a href="/cardio-center/">Cardio Center</a></li>
+                            <li><a href="/personal-training-2/">Personal Training</a></li>
+                            <li><a href="/weight-management/">Weight Management</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/memberships/">Membership</a></li>
+                    <li><a href="/programs/">Programs</a></li>
+                    <li><a href="/tips/">Tips</a></li>
+                    <li><a href="/contact-3/">Contact</a></li>
+                    <a href="/memberships/" class="btn btn-primary btn-mobile-only">Join Now</a>
+                </ul>
+                <a href="/memberships/" class="btn btn-primary header-btn">Join Now</a>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <script>
+        // Sticky Header Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (header) {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+        });
+
+        // Active Nav Link Highlight
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.replace('fa-bars', 'fa-times');
+                } else {
+                    icon.classList.replace('fa-times', 'fa-bars');
+                }
+            });
+
+            // Close menu when a link is clicked
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>

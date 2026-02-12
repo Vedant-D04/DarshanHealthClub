@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer - Darshan HEALTH CLUB</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700;800&family=Figtree:wght@300;400;500;600;700&display=swap');
+
+        :root {
+            /* Colors - Cult.fit Inspired Theme */
+            --bg-dark: #0a0e15;
+            --bg-card: #151922;
+            --bg-card-hover: #1d232e;
+            --bg-elevated: #242b38;
+
+            /* Accent Colors - Cult.fit Exact Palette */
+            --primary: #7FFFD4;
+            --primary-light: #90EE90;
+            --primary-glow: rgba(127, 255, 212, 0.3);
+            --accent-mint: #7FFFD4;
+            --accent-lime: #C0E080;
+            --accent-yellow: #F0E68C;
+            --gradient-start: #7FFFD4;
+            --gradient-middle: #C0E080;
+            --gradient-end: #F0E68C;
+
+            /* Text Colors */
+            --text-white: #ffffff;
+            --text-cream: #f0f4f8;
+            --text-light: rgba(255, 255, 255, 0.9);
+            --text-muted: rgba(255, 255, 255, 0.6);
+            --text-dim: rgba(255, 255, 255, 0.4);
+
+            /* Borders & Shadows */
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 255, 255, 0.15);
+            --glow: 0 0 40px rgba(127, 255, 212, 0.2);
+
+            /* Typography */
+            --font-heading: 'Bricolage Grotesque', sans-serif;
+            --font-body: 'Figtree', sans-serif;
+
+            /* Transitions */
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-dark) !important;
+            color: var(--text-cream) !important;
+            font-size: 16px;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-card);
+            padding: 70px 0 30px;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-brand .logo {
+            font-family: var(--font-heading);
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--text-white);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .footer-brand .logo i {
+            color: var(--primary);
+            font-size: 1.4rem;
+        }
+
+        .footer-brand .logo span {
+            font-weight: 400;
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-left: 4px;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .footer-column h4 {
+            color: var(--text-white);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-column a {
+            display: block;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .footer-column a:hover {
+            color: var(--primary);
+        }
+
+        .footer-column a i {
+            margin-right: 8px;
+            width: 16px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid var(--border);
+            padding-top: 30px;
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        
+        .nav-links li {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: rgba(10, 14, 21, 0.98);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px 0;
+            min-width: 220px;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 1100;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
+            list-style: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-links li:hover .dropdown-menu {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .dropdown-menu a {
+            padding: 12px 24px;
+            display: block;
+            color: var(--text-light) !important;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition) !important;
+            white-space: nowrap;
+            letter-spacing: 0.01em;
+        }
+
+        .dropdown-menu a::after {
+            display: none !important;
+        }
+
+        .dropdown-menu a:hover {
+            background: rgba(127, 255, 212, 0.08);
+            color: var(--primary) !important;
+            padding-left: 30px;
+        }
+
+        /* Mobile Adjustments for Dropdown */
+        @media (max-width: 992px) {
+            .dropdown-menu {
+                position: static;
+                transform: none;
+                visibility: visible;
+                opacity: 1;
+                background: transparent;
+                border: none;
+                box-shadow: none;
+                padding: 10px 0 0 20px;
+                min-width: unset;
+                display: none;
+            }
+
+            .nav-links li:hover .dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-menu a {
+                padding: 8px 0;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .header-btn {
+                display: none !important;
+            }
+
+            .btn-mobile-only {
+                display: inline-flex !important;
+                width: 100%;
+                margin-top: 20px;
+                justify-content: center;
+            }
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            footer {
+                padding: 50px 0 30px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 30px;
+            }
+
+            .footer-brand .logo {
+                justify-content: center;
+            }
+
+            .footer-column h4 {
+                margin-bottom: 12px;
+            }
+
+            .footer-bottom {
+                padding-top: 20px;
+                font-size: 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 16px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="/home-2/" class="logo">
+                        <i class="fas fa-dumbbell"></i>
+                        DARSHAN HEALTH CLUB
+                    </a>
+                    <p>Mumbai's premier fitness destination since 1983. Transform your body, elevate your life with
+                        expert guidance and world-class facilities.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <a href="tel:+912226289797"><i class="fas fa-phone"></i> +91 22 2628 9797</a>
+                    <a href="mailto:darshanhealthclub@gmail.com"><i class="fas fa-envelope"></i> Email Us</a>
+                    <a href="/contact-3/"><i class="fas fa-map-marker-alt"></i> Andheri West, Mumbai</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Darshan HEALTH CLUB. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

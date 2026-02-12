@@ -1,0 +1,259 @@
+<!-- SIMPLIFIED HEADER FOR WORDPRESS -->
+<!-- Place this in Elementor HTML widget -->
+<!-- WordPress Menu should be added separately in Elementor -->
+
+<style>
+    /* Header Container */
+    .dhc-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0;
+        position: relative;
+    }
+
+    /* Logo Styling */
+    .dhc-logo {
+        font-family: 'Bricolage Grotesque', sans-serif;
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+
+    .dhc-logo:hover {
+        transform: scale(1.02);
+    }
+
+    .dhc-logo i {
+        color: #7FFFD4;
+        font-size: 1.3rem;
+        animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+        0%,
+        100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+    }
+
+    .dhc-logo-text {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+    }
+
+    .dhc-logo-main {
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        background: linear-gradient(135deg, #7FFFD4 0%, #C0E080 50%, #F0E68C 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .dhc-logo-sub {
+        font-size: 0.5em;
+        font-weight: 400;
+        color: rgba(255, 255, 255, 0.6);
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-top: 2px;
+        -webkit-text-fill-color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* Join Now Button */
+    .dhc-cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 32px;
+        font-family: 'Figtree', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 600;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #7FFFD4, #C0E080, #F0E68C);
+        color: #0a0e15;
+        text-decoration: none;
+        box-shadow: 0 4px 20px rgba(127, 255, 212, 0.3);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .dhc-cta-btn::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.3);
+        transform: translate(-50%, -50%);
+        transition: width 0.6s, height 0.6s;
+    }
+
+    .dhc-cta-btn:hover::before {
+        width: 300px;
+        height: 300px;
+    }
+
+    .dhc-cta-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 30px rgba(127, 255, 212, 0.5);
+    }
+
+    .dhc-cta-btn i {
+        position: relative;
+        z-index: 1;
+        transition: transform 0.3s ease;
+    }
+
+    .dhc-cta-btn:hover i {
+        transform: translateX(4px);
+    }
+
+    .dhc-cta-btn span {
+        position: relative;
+        z-index: 1;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+        .dhc-header {
+            padding: 16px 0;
+        }
+
+        .dhc-logo {
+            font-size: 1.4rem;
+        }
+
+        .dhc-logo i {
+            font-size: 1.3rem;
+        }
+
+        .dhc-cta-btn {
+            padding: 12px 24px;
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .dhc-cta-btn {
+            padding: 10px 20px;
+            font-size: 0.85rem;
+        }
+
+        .dhc-cta-btn span {
+            display: none;
+        }
+
+        .dhc-cta-btn i {
+            margin: 0;
+        }
+    }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: rgba(10, 14, 21, 0.98);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 12px 0;
+            min-width: 220px;
+            visibility: hidden;
+            opacity: 0;
+            z-index: 1100;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
+            list-style: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-links li:hover .dropdown-menu {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .dropdown-menu a {
+            padding: 12px 24px;
+            display: block;
+            color: var(--text-light) !important;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: var(--transition) !important;
+            white-space: nowrap;
+            letter-spacing: 0.01em;
+        }
+
+        .dropdown-menu a::after {
+            display: none !important;
+        }
+
+        .dropdown-menu a:hover {
+            background: rgba(127, 255, 212, 0.08);
+            color: var(--primary) !important;
+            padding-left: 30px;
+        }
+
+        /* Mobile Adjustments for Dropdown */
+        @media (max-width: 992px) {
+            .dropdown-menu {
+                position: static;
+                transform: none;
+                visibility: visible;
+                opacity: 1;
+                background: transparent;
+                border: none;
+                box-shadow: none;
+                padding: 10px 0 0 20px;
+                min-width: unset;
+                display: none;
+            }
+
+            .nav-links li:hover .dropdown-menu {
+                display: block;
+            }
+
+            .dropdown-menu a {
+                padding: 8px 0;
+                font-size: 1rem;
+            }
+        }
+
+    </style>
+
+<div class="dhc-header">
+    <!-- Logo -->
+    <a href="/home-2/" class="dhc-logo">
+        <i class="fas fa-dumbbell"></i>
+        <div class="dhc-logo-text">
+            <span class="dhc-logo-main">DARSHAN</span>
+            <span class="dhc-logo-sub">HEALTH CLUB</span>
+        </div>
+    </a>
+
+    <!-- Join Now Button -->
+    <a href="/memberships/" class="dhc-cta-btn">
+        <span>Join Now</span>
+        <i class="fas fa-arrow-right"></i>
+    </a>
+</div>
