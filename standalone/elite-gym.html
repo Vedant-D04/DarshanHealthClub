@@ -204,6 +204,7 @@
                 margin-top: 20px;
                 justify-content: center;
             }
+
             .dropdown-menu {
                 position: static;
                 transform: none;
@@ -242,6 +243,7 @@
             background: linear-gradient(135deg, #7FFFD4, #C0E080, #F0E68C);
             color: #0a0e15;
         }
+
         .btn-mobile-only {
             display: none;
         }
@@ -333,7 +335,7 @@
                 margin-top: 20px;
                 justify-content: center;
             }
-            
+
             .nav-links.active {
                 right: 0;
             }
@@ -368,7 +370,8 @@
                 height: 40px;
             }
         }
-            .footer-column h4 {
+
+        .footer-column h4 {
             color: var(--text-white);
             margin-bottom: 24px;
             font-size: 1.1rem;
@@ -404,7 +407,7 @@
             color: var(--text-dim);
             font-size: 0.85rem;
         }
-    
+
         @media (max-width: 992px) {
             .footer-content {
                 grid-template-columns: 1fr 1fr;
@@ -491,7 +494,7 @@
         </div>
     </section>
 
-        <footer>
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
@@ -527,12 +530,10 @@
                 </div>
                 <div class="footer-column">
                     <h4>Certification</h4>
-                    <p style="color: var(--text-muted); margin-bottom: 12px;">Officially recognized by fitness
-                        authorities</p>
-                    <div style="display: flex; gap: 12px; margin-top: 16px;">
-                        <img src="https://darshanhealth.club/wp-content/uploads/2025/10/expert-rating-certificate-1.jpg" alt="Certification"
-                            style="width: 100%; max-width: 120px; border: 1px solid var(--border); border-radius: 4px;">
-                    </div>
+                    <p style="color: var(--text-muted); margin-bottom: 12px;">Officially recognized by national and
+                        international fitness authorities</p>
+                    <a href="/about-3/#certifications" style="margin-top: 8px;"><i class="fas fa-certificate"></i> View
+                        our Certifications</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -547,7 +548,7 @@
             if (window.scrollY > 50) header.classList.add('scrolled');
             else header.classList.remove('scrolled');
         });
-    
+
         const menuToggle = document.querySelector('.menu-toggle');
         const navLinks = document.querySelector('.nav-links');
 

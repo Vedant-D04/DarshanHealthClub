@@ -30,7 +30,7 @@
     }
 
     .dhc-logo i {
-        color: #7FFFD4;
+        color: #FF0800;
         font-size: 1.3rem;
         animation: pulse 2s ease-in-out infinite;
     }
@@ -56,7 +56,7 @@
     .dhc-logo-main {
         font-weight: 800;
         letter-spacing: 0.05em;
-        background: linear-gradient(135deg, #7FFFD4 0%, #C0E080 50%, #F0E68C 100%);
+        background: var(--gradient-red);
         -webkit-background-clip: text;
         background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -111,7 +111,7 @@
 
     .dhc-cta-btn:hover {
         transform: translateY(-3px);
-        box-shadow: 0 8px 30px rgba(127, 255, 212, 0.5);
+        box-shadow: 0 8px 30px rgba(255, 8, 0, 0.5);
     }
 
     .dhc-cta-btn i {
@@ -164,82 +164,81 @@
         }
     }
 
-        .nav-links li {
-            position: relative;
-        }
+    .nav-links li {
+        position: relative;
+    }
 
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        background: rgba(10, 14, 21, 0.98);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 12px 0;
+        min-width: 220px;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 1100;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
+        list-style: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-links li:hover .dropdown-menu {
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+
+    .dropdown-menu a {
+        padding: 12px 24px;
+        display: block;
+        color: var(--text-light) !important;
+        font-size: 0.9rem;
+        font-weight: 500;
+        transition: var(--transition) !important;
+        white-space: nowrap;
+        letter-spacing: 0.01em;
+    }
+
+    .dropdown-menu a::after {
+        display: none !important;
+    }
+
+    .dropdown-menu a:hover {
+        background: rgba(255, 8, 0, 0.08);
+        color: var(--primary) !important;
+        padding-left: 30px;
+    }
+
+    /* Mobile Adjustments for Dropdown */
+    @media (max-width: 992px) {
         .dropdown-menu {
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%) translateY(10px);
-            background: rgba(10, 14, 21, 0.98);
-            backdrop-filter: blur(20px);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 12px 0;
-            min-width: 220px;
-            visibility: hidden;
-            opacity: 0;
-            z-index: 1100;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05);
-            list-style: none;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: static;
+            transform: none;
+            visibility: visible;
+            opacity: 1;
+            background: transparent;
+            border: none;
+            box-shadow: none;
+            padding: 10px 0 0 20px;
+            min-width: unset;
+            display: none;
         }
 
         .nav-links li:hover .dropdown-menu {
-            visibility: visible;
-            opacity: 1;
-            transform: translateX(-50%) translateY(0);
+            display: block;
         }
 
         .dropdown-menu a {
-            padding: 12px 24px;
-            display: block;
-            color: var(--text-light) !important;
-            font-size: 0.9rem;
-            font-weight: 500;
-            transition: var(--transition) !important;
-            white-space: nowrap;
-            letter-spacing: 0.01em;
+            padding: 8px 0;
+            font-size: 1rem;
         }
-
-        .dropdown-menu a::after {
-            display: none !important;
-        }
-
-        .dropdown-menu a:hover {
-            background: rgba(127, 255, 212, 0.08);
-            color: var(--primary) !important;
-            padding-left: 30px;
-        }
-
-        /* Mobile Adjustments for Dropdown */
-        @media (max-width: 992px) {
-            .dropdown-menu {
-                position: static;
-                transform: none;
-                visibility: visible;
-                opacity: 1;
-                background: transparent;
-                border: none;
-                box-shadow: none;
-                padding: 10px 0 0 20px;
-                min-width: unset;
-                display: none;
-            }
-
-            .nav-links li:hover .dropdown-menu {
-                display: block;
-            }
-
-            .dropdown-menu a {
-                padding: 8px 0;
-                font-size: 1rem;
-            }
-        }
-
-    </style>
+    }
+</style>
 
 <div class="dhc-header">
     <!-- Logo -->

@@ -253,7 +253,7 @@
             transition: var(--transition);
         }
 
-        
+
         .nav-links li {
             position: relative;
         }
@@ -316,6 +316,7 @@
                 margin-top: 20px;
                 justify-content: center;
             }
+
             .dropdown-menu {
                 position: static;
                 transform: none;
@@ -379,6 +380,7 @@
             font-weight: 600;
             box-shadow: 0 4px 20px rgba(127, 255, 212, 0.3);
         }
+
         .btn-mobile-only {
             display: none;
         }
@@ -1062,6 +1064,7 @@
         .footer-column .btn-primary {
             color: #000000;
         }
+
         .btn-mobile-only {
             display: none;
         }
@@ -1338,6 +1341,7 @@
                 margin-top: 20px;
                 justify-content: center;
             }
+
             .menu-toggle {
                 display: block;
             }
@@ -1429,10 +1433,10 @@
 
             .services-grid,
             .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 50px;
-        }
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                gap: 50px;
+            }
 
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -1660,10 +1664,10 @@
 
             /* Footer */
             .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 50px;
-        }
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                gap: 50px;
+            }
 
             .footer-column h4 {
                 margin-bottom: 12px;
@@ -1744,9 +1748,19 @@
         }
 
         @media (max-width: 480px) {
-            .logo { font-size: 1.2rem; gap: 6px; }
-            .logo i { font-size: 1.1rem; }
-            .logo span { font-size: 0.85rem; }
+            .logo {
+                font-size: 1.2rem;
+                gap: 6px;
+            }
+
+            .logo i {
+                font-size: 1.1rem;
+            }
+
+            .logo span {
+                font-size: 0.85rem;
+            }
+
             .container {
                 padding: 0 16px;
             }
@@ -1830,7 +1844,7 @@
                 padding: 60px 0;
             }
         }
-    
+
         @media (max-width: 992px) {
             .footer-content {
                 grid-template-columns: 1fr 1fr;
@@ -1866,9 +1880,10 @@
                 <ul class="nav-links">
                     <li><a href="/home-2/">Home</a></li>
                     <li><a href="/about-3/">About</a></li>
-                    
+
                     <li>
-                        <a href="/Facilites/">Facilities <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                        <a href="/Facilites/">Facilities <i class="fas fa-chevron-down"
+                                style="font-size: 0.7rem; margin-left: 4px;"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="/elite-gym/">Elite Gym</a></li>
                             <li><a href="/cardio-center/">Cardio Center</a></li>
@@ -1978,7 +1993,7 @@
     </main>
 
     <!-- FOOTER -->
-        <footer>
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
@@ -2014,12 +2029,10 @@
                 </div>
                 <div class="footer-column">
                     <h4>Certification</h4>
-                    <p style="color: var(--text-muted); margin-bottom: 12px;">Officially recognized by fitness
-                        authorities</p>
-                    <div style="display: flex; gap: 12px; margin-top: 16px;">
-                        <img src="https://darshanhealth.club/wp-content/uploads/2025/10/expert-rating-certificate-1.jpg" alt="Certification"
-                            style="width: 100%; max-width: 120px; border: 1px solid var(--border); border-radius: 4px;">
-                    </div>
+                    <p style="color: var(--text-muted); margin-bottom: 12px;">Officially recognized by national and
+                        international fitness authorities</p>
+                    <a href="/about-3/#certifications" style="margin-top: 8px;"><i class="fas fa-certificate"></i> View
+                        our Certifications</a>
                 </div>
             </div>
             <div class="footer-bottom">

@@ -295,6 +295,7 @@ footer {
 
 /* Tablet - 992px and below */
 @media (max-width: 992px) {
+
     /* Header */
     .menu-toggle {
         display: block;

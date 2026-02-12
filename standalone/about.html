@@ -26,12 +26,13 @@
             --primary: #7FFFD4;
             --primary-light: #90EE90;
             --primary-glow: rgba(127, 255, 212, 0.3);
+            --brand-red: #E31E24;
+            --brand-white: #FFFFFF;
             --accent-mint: #7FFFD4;
             --accent-lime: #C0E080;
             --accent-yellow: #F0E68C;
-            --gradient-start: #7FFFD4;
-            --gradient-middle: #C0E080;
-            --gradient-end: #F0E68C;
+            --gradient-start: #E31E24;
+            --gradient-end: #ff4d4d;
 
             /* Text Colors */
             --text-white: #ffffff;
@@ -252,7 +253,7 @@
             transition: var(--transition);
         }
 
-        
+
         .nav-links li {
             position: relative;
         }
@@ -315,6 +316,7 @@
                 margin-top: 20px;
                 justify-content: center;
             }
+
             .dropdown-menu {
                 position: static;
                 transform: none;
@@ -378,6 +380,7 @@
             font-weight: 600;
             box-shadow: 0 4px 20px rgba(127, 255, 212, 0.3);
         }
+
         .btn-mobile-only {
             display: none;
         }
@@ -1061,6 +1064,7 @@
         .footer-column .btn-primary {
             color: #000000;
         }
+
         .btn-mobile-only {
             display: none;
         }
@@ -1337,6 +1341,7 @@
                 margin-top: 20px;
                 justify-content: center;
             }
+
             .menu-toggle {
                 display: block;
             }
@@ -1428,10 +1433,10 @@
 
             .services-grid,
             .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 50px;
-        }
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                gap: 50px;
+            }
 
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -1659,10 +1664,10 @@
 
             /* Footer */
             .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 50px;
-        }
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                gap: 50px;
+            }
 
             .footer-column h4 {
                 margin-bottom: 12px;
@@ -1743,9 +1748,19 @@
         }
 
         @media (max-width: 480px) {
-            .logo { font-size: 1.2rem; gap: 6px; }
-            .logo i { font-size: 1.1rem; }
-            .logo span { font-size: 0.85rem; }
+            .logo {
+                font-size: 1.2rem;
+                gap: 6px;
+            }
+
+            .logo i {
+                font-size: 1.1rem;
+            }
+
+            .logo span {
+                font-size: 0.85rem;
+            }
+
             .container {
                 padding: 0 16px;
             }
@@ -1829,7 +1844,7 @@
                 padding: 60px 0;
             }
         }
-    
+
         @media (max-width: 992px) {
             .footer-content {
                 grid-template-columns: 1fr 1fr;
@@ -1846,6 +1861,266 @@
                 align-items: center;
                 display: flex;
                 flex-direction: column;
+            }
+        }
+
+        /* ========================================
+   CERTIFICATE SECTION
+   ======================================== */
+
+        .cert-carousel-section {
+            padding: 80px 0 100px;
+            background: var(--bg-card);
+            position: relative;
+        }
+
+        .cert-carousel-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+            opacity: 0.3;
+        }
+
+        .cert-scroll-wrapper {
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .cert-scroll {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding: 20px 0 30px;
+            scrollbar-width: none;
+        }
+
+        .cert-scroll::-webkit-scrollbar {
+            display: none;
+        }
+
+        .cert-card {
+            flex: 0 0 280px;
+            scroll-snap-align: start;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            group: cert;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 50px rgba(127, 255, 212, 0.12);
+        }
+
+        .cert-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: var(--transition);
+        }
+
+        .cert-card:hover img {
+            transform: scale(1.03);
+        }
+
+        .cert-card-label {
+            padding: 14px 18px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .cert-card-label span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .cert-card-label i {
+            font-size: 0.85rem;
+            color: var(--primary);
+            opacity: 0;
+            transition: var(--transition);
+            transform: translateX(-6px);
+        }
+
+        .cert-card:hover .cert-card-label i {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .cert-card:hover .cert-card-label span {
+            color: var(--text-white);
+        }
+
+        .cert-scroll-hint {
+            text-align: center;
+            color: var(--text-dim);
+            font-size: 0.8rem;
+            margin-top: 8px;
+            letter-spacing: 0.05em;
+        }
+
+        .cert-scroll-hint i {
+            margin: 0 4px;
+            animation: swipeHint 2s ease-in-out infinite;
+        }
+
+        @keyframes swipeHint {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(6px);
+            }
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.95);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox-content img {
+            max-width: 90vw;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
+            cursor: zoom-in;
+            transition: transform 0.3s ease;
+        }
+
+        .lightbox-content img.zoomed {
+            cursor: zoom-out;
+            transform: scale(2);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: -50px;
+            right: -10px;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            z-index: 10001;
+        }
+
+        .lightbox-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            z-index: 10001;
+        }
+
+        .lightbox-nav:hover {
+            background: rgba(127, 255, 212, 0.2);
+            border-color: var(--primary);
+        }
+
+        .lightbox-prev {
+            left: -70px;
+        }
+
+        .lightbox-next {
+            right: -70px;
+        }
+
+        .lightbox-counter {
+            position: absolute;
+            bottom: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-family: var(--font-body);
+        }
+
+        @media (max-width: 768px) {
+            .cert-card {
+                flex: 0 0 240px;
+            }
+
+            .cert-card img {
+                height: 160px;
+            }
+
+            .lightbox-prev {
+                left: 10px;
+            }
+
+            .lightbox-next {
+                right: 10px;
+            }
+
+            .lightbox-close {
+                top: 10px;
+                right: 10px;
+            }
+
+            .lightbox-content img {
+                max-width: 95vw;
             }
         }
     </style>
@@ -1865,9 +2140,10 @@
                 <ul class="nav-links">
                     <li><a href="/home-2/">Home</a></li>
                     <li><a href="/about-3/" class="active">About</a></li>
-                    
+
                     <li>
-                        <a href="/Facilites/">Facilities <i class="fas fa-chevron-down" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                        <a href="/Facilites/">Facilities <i class="fas fa-chevron-down"
+                                style="font-size: 0.7rem; margin-left: 4px;"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="/elite-gym/">Elite Gym</a></li>
                             <li><a href="/cardio-center/">Cardio Center</a></li>
@@ -1902,38 +2178,83 @@
         <!-- About Content -->
         <section class="section">
             <div class="container">
-                <div class="grid-2">
-                    <div class="reveal">
-                        <h2><span class="gradient-text">A Legacy of Excellence</span></h2>
-                        <p>Darshan HEALTH CLUB was established in 1983 with a single goal: to provide the best fitness
-                            instruction in Mumbai. Founded by <strong>Mr. Darshan Aurora</strong>, a celebrated
-                            bodybuilder and IBFF National Silver Medalist, the club has been a landmark in the fitness
-                            community for over 40 years.</p>
-                        <p>Today, the club is personally supervised by Mr. India Darshan Aurora and <strong>Physical
-                                Culturist Siddharth Aurora</strong>, ensuring that every member receives expert guidance
-                            tailored to their physiological needs.</p>
-                        <div class="glass glass-card" style="margin-top: 24px; border-left: 4px solid var(--primary);">
-                            <p style="font-style: italic; margin: 0;">"We don't just provide
-                                equipment; we provide the knowledge and environment needed for real, lasting
-                                transformation."</p>
+                <div class="reveal"
+                    style="text-align: center; margin-bottom: 60px; max-width: 900px; margin-inline: auto;">
+                    <h2><span class="gradient-text">A Legacy of Excellence</span></h2>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-light); margin-bottom: 24px;">
+                        Darshan HEALTH CLUB was established in 1983 with a single goal: to provide the best fitness
+                        instruction in Mumbai. Founded by <strong>Mr. Darshan Aurora</strong>, a celebrated
+                        bodybuilder and IBFF National Silver Medalist, the club has been a landmark in the fitness
+                        community for over 40 years.
+                    </p>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-muted); margin-bottom: 30px;">
+                        Today, the club is personally supervised by Mr. India Darshan Aurora and <strong>Physical
+                            Culturist Siddharth Aurora</strong>, ensuring that every member receives expert guidance
+                        tailored to their physiological needs.
+                    </p>
+                    <div class="glass glass-card"
+                        style="background: var(--brand-red); border-left: none; padding: 30px 40px; box-shadow: 0 10px 30px rgba(227, 30, 36, 0.3);">
+                        <p
+                            style="font-style: italic; margin: 0; font-size: 1.3rem; color: var(--brand-white); font-weight: 500;">
+                            "We don't just provide equipment; we provide the knowledge and environment needed for real,
+                            lasting transformation."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="section-header reveal" style="margin-top: 80px;">
+                    <h2 style="color: var(--brand-white);"><span
+                            style="border-bottom: 3px solid var(--brand-red); padding-bottom: 5px;">Our
+                            Leadership</span></h2>
+                </div>
+
+                <div class="grid-2" style="gap: 30px;">
+                    <div class="team-card reveal"
+                        style="display: flex; flex-direction: column; align-items: center; padding: 40px; height: 100%;">
+                        <img src="https://darshanhealth.club/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-02-at-20.25.37.jpeg"
+                            alt="Mr. Darshan Aurora"
+                            style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary); margin-bottom: 24px;">
+                        <div style="text-align: center;">
+                            <h3 style="font-size: 1.8rem; margin-bottom: 8px;">DARSHAN AURORA</h3>
+                            <p class="role" style="font-size: 1.1rem; color: var(--brand-red); margin-bottom: 20px;">
+                                Founder & Director</p>
+                            <ul
+                                style="text-align: left; color: var(--text-muted); list-style: none; padding: 0; display: inline-block;">
+                                <li style="margin-bottom: 12px; font-size: 1.05rem;"><i class="fas fa-trophy"
+                                        style="color: var(--brand-red); margin-right: 12px;"></i>Mr. India</li>
+                                <li style="font-size: 1.05rem;"><i class="fas fa-gavel"
+                                        style="color: var(--primary); margin-right: 12px;"></i>International Judge</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="reveal">
-                        <div class="team-card" style="margin-bottom: 24px;">
-                            <img src="https://darshanhealth.club/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-02-at-20.25.37.jpeg"
-                                alt="Mr. Darshan Aurora">
-                            <h3>DARSHAN AURORA</h3>
-                            <p class="role">Founder & Director</p>
-                            <p>1983-84 IBFF National Silver Medalist. Expert in physical culture and competitive
-                                bodybuilding training.</p>
-                        </div>
-                        <div class="team-card">
-                            <img src="https://darshanhealth.club/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-02-at-20.25.38.jpeg"
-                                alt="Mr. Siddharth Aurora">
-                            <h3>SIDDHARTH AURORA</h3>
-                            <p class="role">Director & Physical Culturist</p>
-                            <p>Specializes in biomechanics, functional training, and high-performance nutrition
-                                planning.</p>
+
+                    <div class="team-card reveal"
+                        style="display: flex; flex-direction: column; align-items: center; padding: 40px; height: 100%;">
+                        <img src="https://darshanhealth.club/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-02-at-20.25.38.jpeg"
+                            alt="Mr. Siddharth Aurora"
+                            style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; border: 3px solid var(--primary); margin-bottom: 24px;">
+                        <div style="text-align: center;">
+                            <h3 style="font-size: 1.8rem; margin-bottom: 8px;">SIDDHARTH AURORA</h3>
+                            <p class="role" style="font-size: 1.1rem; color: var(--brand-red); margin-bottom: 20px;">
+                                Director & Physical Culturist</p>
+                            <ul
+                                style="text-align: left; color: var(--text-muted); list-style: none; padding: 0; display: inline-block;">
+                                <li style="margin-bottom: 8px; font-size: 0.95rem;"><i class="fas fa-check-circle"
+                                        style="color: var(--brand-red); margin-right: 10px;"></i>Qualified Physical
+                                    Culturist</li>
+                                <li style="margin-bottom: 8px; font-size: 0.95rem;"><i class="fas fa-award"
+                                        style="color: var(--brand-red); margin-right: 10px;"></i>International Martial
+                                    Arts Student of the year 2004. (United States Martial Arts Association)</li>
+                                <li style="margin-bottom: 8px; font-size: 0.95rem;"><i class="fas fa-fist-raised"
+                                        style="color: var(--brand-red); margin-right: 10px;"></i>2nd Degree - American
+                                    Black Belt & Advanced Commando Combat System</li>
+                                <li style="margin-bottom: 8px; font-size: 0.95rem;"><i class="fas fa-certificate"
+                                        style="color: var(--brand-red); margin-right: 10px;"></i>Health Club Management
+                                    Certification (Global Certifications / Expert Ratings) 2009</li>
+                                <li style="font-size: 0.95rem;"><i class="fas fa-dumbbell"
+                                        style="color: var(--brand-red); margin-right: 10px;"></i>Workout Design
+                                    Certification (Expert Level)</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -1944,10 +2265,11 @@
         <section class="section">
             <div class="container">
                 <div class="section-header reveal">
-                    <h2>Our <span class="gradient-text">Philosophy</span></h2>
+                    <h2>Our <span style="color: var(--brand-red);">Philosophy</span></h2>
                     <p>What makes Darshan HEALTH CLUB different</p>
                 </div>
-                <div class="grid" style="max-width: 900px; margin: 0 auto;">
+                <div
+                    style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; max-width: 1100px; margin: 0 auto;">
                     <div class="glass glass-card reveal text-center">
                         <i class="fas fa-brain"
                             style="font-size: 2rem; color: var(--primary); margin-bottom: 16px;"></i>
@@ -1973,8 +2295,68 @@
         </section>
     </main>
 
+    <!-- Certificate Carousel Section (3D) -->
+    <section class="carousel-section" id="certifications" style="background: var(--bg-card); padding: 100px 0;">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Our <span class="gradient-text">Certifications</span></h2>
+                <p>Officially recognized by national and international fitness authorities</p>
+            </div>
+
+            <div class="carousel-container reveal">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide" data-index="0" onclick="openLightbox(0)">
+                        <img src="https://darshanhealth.club/wp-content/uploads/2026/02/Certificate-1-scaled.jpg"
+                            alt="Certificate 1">
+                    </div>
+                    <div class="carousel-slide" data-index="1" onclick="openLightbox(1)">
+                        <img src="https://darshanhealth.club/wp-content/uploads/2026/02/Certificate-2-scaled.jpg"
+                            alt="Certificate 2">
+                    </div>
+                    <div class="carousel-slide" data-index="2" onclick="openLightbox(2)">
+                        <img src="https://darshanhealth.club/wp-content/uploads/2026/02/Certificate-3-scaled.jpg"
+                            alt="Certificate 3">
+                    </div>
+                    <div class="carousel-slide" data-index="3" onclick="openLightbox(3)">
+                        <img src="https://darshanhealth.club/wp-content/uploads/2026/02/Certificate-4-scaled.jpg"
+                            alt="Certificate 4">
+                    </div>
+                    <div class="carousel-slide" data-index="4" onclick="openLightbox(4)">
+                        <img src="https://darshanhealth.club/wp-content/uploads/2026/02/Certificate-5-scaled.jpg"
+                            alt="Certificate 5">
+                    </div>
+                    <div class="carousel-slide" data-index="5" onclick="openLightbox(5)">
+                        <img src="https://darshanhealth.club/wp-content/uploads/2026/02/Certificate-6-scaled.jpg"
+                            alt="Certificate 6">
+                    </div>
+                </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn" id="prevBtn" aria-label="Previous">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn" id="nextBtn" aria-label="Next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="carousel-dots" id="carouselDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Lightbox -->
+    <div class="lightbox" id="certLightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+            <button class="lightbox-nav lightbox-prev" onclick="prevCert()"><i class="fas fa-chevron-left"></i></button>
+            <img id="lightboxImg" src="" alt="Certificate">
+            <button class="lightbox-nav lightbox-next" onclick="nextCert()"><i
+                    class="fas fa-chevron-right"></i></button>
+            <div class="lightbox-counter" id="lightboxCounter"></div>
+        </div>
+    </div>
+
     <!-- FOOTER -->
-        <footer>
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
@@ -2010,12 +2392,10 @@
                 </div>
                 <div class="footer-column">
                     <h4>Certification</h4>
-                    <p style="color: var(--text-muted); margin-bottom: 12px;">Officially recognized by fitness
-                        authorities</p>
-                    <div style="display: flex; gap: 12px; margin-top: 16px;">
-                        <img src="https://darshanhealth.club/wp-content/uploads/2025/10/expert-rating-certificate-1.jpg" alt="Certification"
-                            style="width: 100%; max-width: 120px; border: 1px solid var(--border); border-radius: 4px;">
-                    </div>
+                    <p style="color: var(--text-muted); margin-bottom: 12px;">Officially recognized by national and
+                        international fitness authorities</p>
+                    <a href="/about-3/#certifications" style="margin-top: 8px;"><i class="fas fa-certificate"></i> View
+                        our Certifications</a>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -2325,6 +2705,79 @@
                 }, 1500);
             });
         }
+
+        // ========================================
+        // CERTIFICATE LIGHTBOX
+        // ========================================
+        const certImages = [
+            'https://darshanhealth.club/wp-content/uploads/2026/02/Certificate-1-scaled.jpg',
+            'https://darshanhealth.club/wp-content/uploads/2026/02/Certificate-2-scaled.jpg',
+            'https://darshanhealth.club/wp-content/uploads/2026/02/Certificate-3-scaled.jpg',
+            'https://darshanhealth.club/wp-content/uploads/2026/02/Certificate-4-scaled.jpg',
+            'https://darshanhealth.club/wp-content/uploads/2026/02/Certificate-5-scaled.jpg',
+            'https://darshanhealth.club/wp-content/uploads/2026/02/Certificate-6-scaled.jpg'
+        ];
+        let currentCert = 0;
+
+        function openLightbox(index) {
+            currentCert = index;
+            const lightbox = document.getElementById('certLightbox');
+            const img = document.getElementById('lightboxImg');
+            img.src = certImages[currentCert];
+            img.classList.remove('zoomed');
+            document.getElementById('lightboxCounter').textContent = `${currentCert + 1} / ${certImages.length}`;
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('certLightbox');
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function nextCert() {
+            currentCert = (currentCert + 1) % certImages.length;
+            const img = document.getElementById('lightboxImg');
+            img.src = certImages[currentCert];
+            img.classList.remove('zoomed');
+            document.getElementById('lightboxCounter').textContent = `${currentCert + 1} / ${certImages.length}`;
+        }
+
+        function prevCert() {
+            currentCert = (currentCert - 1 + certImages.length) % certImages.length;
+            const img = document.getElementById('lightboxImg');
+            img.src = certImages[currentCert];
+            img.classList.remove('zoomed');
+            document.getElementById('lightboxCounter').textContent = `${currentCert + 1} / ${certImages.length}`;
+        }
+
+        // Click on lightbox image to toggle zoom
+        document.getElementById('lightboxImg').addEventListener('click', function () {
+            this.classList.toggle('zoomed');
+        });
+
+        // Close on background click
+        document.getElementById('certLightbox').addEventListener('click', function (e) {
+            if (e.target === this) closeLightbox();
+        });
+
+        // Initialize 3D Carousel
+        document.addEventListener('DOMContentLoaded', () => {
+            const carouselContainer = document.querySelector('.carousel-container');
+            if (carouselContainer) {
+                new Carousel3D(carouselContainer);
+            }
+        });
+
+        // Keyboard navigation for lightbox
+        document.addEventListener('keydown', function (e) {
+            const lightbox = document.getElementById('certLightbox');
+            if (!lightbox.classList.contains('active')) return;
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowRight') nextCert();
+            if (e.key === 'ArrowLeft') prevCert();
+        });
 
     </script>
 </body>
