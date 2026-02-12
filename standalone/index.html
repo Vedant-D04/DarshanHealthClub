@@ -22,16 +22,24 @@
             --bg-card-hover: #1d232e;
             --bg-elevated: #242b38;
 
-            /* Accent Colors - Cult.fit Exact Palette */
-            --primary: #7FFFD4;
-            --primary-light: #90EE90;
-            --primary-glow: rgba(127, 255, 212, 0.3);
-            --accent-mint: #7FFFD4;
-            --accent-lime: #C0E080;
-            --accent-yellow: #F0E68C;
-            --gradient-start: #7FFFD4;
-            --gradient-middle: #C0E080;
-            --gradient-end: #F0E68C;
+            /* Accent Colors - Candy Apple Red + White */
+            --primary: #D4364A;
+            --primary-light: #E8657A;
+            --primary-glow: rgba(212, 54, 74, 0.3);
+            --accent-mint: #D4364A;
+            --accent-lime: #E8657A;
+            --accent-yellow: #ffffff;
+            --gradient-start: #D4364A;
+            --gradient-middle: #E8657A;
+            --gradient-end: #ffffff;
+
+            /* Red Theme Aliases */
+            --red-candy: #D4364A;
+            --red-deep: #B82E3F;
+            --red-light: #E8657A;
+            --red-glow: rgba(212, 54, 74, 0.25);
+            --red-gradient-start: #D4364A;
+            --red-gradient-end: #ffffff;
 
             /* Text Colors */
             --text-white: #ffffff;
@@ -43,7 +51,7 @@
             /* Borders & Shadows */
             --border: rgba(255, 255, 255, 0.08);
             --border-hover: rgba(255, 255, 255, 0.15);
-            --glow: 0 0 40px rgba(127, 255, 212, 0.2);
+            --glow: 0 0 40px rgba(212, 54, 74, 0.2);
 
             /* Typography */
             --font-heading: 'Bricolage Grotesque', sans-serif;
@@ -82,8 +90,8 @@
             width: 100%;
             height: 100%;
             background:
-                radial-gradient(ellipse at 80% 20%, rgba(127, 255, 212, 0.04) 0%, transparent 50%),
-                radial-gradient(ellipse at 20% 80%, rgba(192, 224, 128, 0.03) 0%, transparent 50%);
+                radial-gradient(ellipse at 80% 20%, rgba(212, 54, 74, 0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 20% 80%, rgba(232, 101, 122, 0.03) 0%, transparent 50%);
             pointer-events: none;
             z-index: -1;
         }
@@ -186,9 +194,9 @@
         }
 
         header.scrolled {
-            background: rgba(6, 0, 16, 0.9);
+            background: linear-gradient(135deg, rgba(227, 27, 35, 0.92) 0%, rgba(180, 20, 30, 0.95) 100%);
             backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         }
 
         nav {
@@ -250,7 +258,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, var(--primary), var(--gradient-end));
+            background: linear-gradient(90deg, var(--red-candy), var(--red-light));
             transition: var(--transition);
         }
 
@@ -304,7 +312,7 @@
         }
 
         .dropdown-menu a:hover {
-            background: rgba(127, 255, 212, 0.08);
+            background: rgba(212, 54, 74, 0.08);
             color: var(--primary) !important;
             padding-left: 30px;
         }
@@ -321,6 +329,7 @@
                 margin-top: 20px;
                 justify-content: center;
             }
+
             .dropdown-menu {
                 position: static;
                 transform: none;
@@ -374,11 +383,12 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #7FFFD4, #C0E080, #F0E68C);
-            color: #0a0e15;
+            background: linear-gradient(135deg, #D4364A, #E8657A);
+            color: #ffffff;
             font-weight: 600;
-            box-shadow: 0 4px 20px rgba(127, 255, 212, 0.3);
+            box-shadow: 0 4px 20px rgba(212, 54, 74, 0.3);
         }
+
         .btn-mobile-only {
             display: none;
         }
@@ -389,7 +399,7 @@
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(127, 255, 212, 0.4);
+            box-shadow: 0 8px 30px rgba(212, 54, 74, 0.4);
         }
 
         .btn-outline {
@@ -401,7 +411,7 @@
         .btn-outline:hover {
             border-color: var(--primary);
             color: var(--text-white);
-            box-shadow: 0 0 20px rgba(234, 255, 0, 0.2);
+            box-shadow: 0 0 20px rgba(212, 54, 74, 0.2);
         }
 
         .btn-mobile-only {
@@ -477,11 +487,11 @@
             font-weight: 800;
             line-height: 0.95;
             margin-bottom: 8px;
-            background: linear-gradient(135deg, #7FFFD4 0%, #C0E080 50%, #F0E68C 100%);
+            background: linear-gradient(135deg, #D4364A 0%, #E8657A 40%, #ffffff 100%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 80px rgba(127, 255, 212, 0.3);
+            text-shadow: 0 0 80px rgba(212, 54, 74, 0.3);
             letter-spacing: -0.02em;
             display: block;
         }
@@ -492,7 +502,7 @@
             font-weight: 700;
             letter-spacing: 0.1em;
             margin-top: 4px;
-            background: linear-gradient(135deg, #90EE90 0%, #F0E68C 100%);
+            background: linear-gradient(135deg, #E8657A 0%, #ffffff 100%);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -580,7 +590,7 @@
             right: -20%;
             width: 80%;
             height: 150%;
-            background: radial-gradient(ellipse, rgba(234, 255, 0, 0.08) 0%, transparent 60%);
+            background: radial-gradient(ellipse, rgba(212, 54, 74, 0.08) 0%, transparent 60%);
             pointer-events: none;
         }
 
@@ -600,8 +610,8 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(234, 255, 0, 0.1);
-            border: 1px solid rgba(234, 255, 0, 0.3);
+            background: rgba(212, 54, 74, 0.1);
+            border: 1px solid rgba(212, 54, 74, 0.3);
             color: var(--primary);
             padding: 8px 16px;
             font-size: 0.85rem;
@@ -712,7 +722,7 @@
         .carousel-slide.active {
             z-index: 10;
             transform: translateX(0) scale(1.15);
-            box-shadow: 0 30px 60px rgba(234, 255, 0, 0.2);
+            box-shadow: 0 30px 60px rgba(212, 54, 74, 0.2);
             border-color: var(--primary);
         }
 
@@ -771,7 +781,7 @@
         .carousel-btn:hover {
             background: var(--primary);
             border-color: var(--primary);
-            box-shadow: 0 0 20px rgba(234, 255, 0, 0.4);
+            box-shadow: 0 0 20px rgba(212, 54, 74, 0.4);
         }
 
         .carousel-dots {
@@ -792,7 +802,7 @@
 
         .carousel-dot.active {
             background: var(--primary);
-            box-shadow: 0 0 10px rgba(234, 255, 0, 0.5);
+            box-shadow: 0 0 10px rgba(212, 54, 74, 0.5);
         }
 
         /* ========================================
@@ -802,8 +812,8 @@
         .stats-bar {
             background: var(--bg-card);
             padding: 50px 0;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
+            border-top: 1px solid rgba(212, 54, 74, 0.15);
+            border-bottom: 1px solid rgba(212, 54, 74, 0.15);
         }
 
         .stats-grid {
@@ -816,7 +826,7 @@
         .stat-item h3 {
             font-size: 3rem;
             margin-bottom: 8px;
-            background: linear-gradient(135deg, var(--primary), var(--gradient-end));
+            background: linear-gradient(135deg, var(--red-candy), var(--red-light), #ffffff);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -854,15 +864,15 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(90deg, var(--primary), var(--gradient-end));
+            background: linear-gradient(90deg, var(--red-candy), var(--red-light));
             opacity: 0;
             transition: var(--transition);
         }
 
         .service-card:hover {
             transform: translateY(-8px);
-            border-color: var(--border-hover);
-            box-shadow: var(--glow);
+            border-color: rgba(212, 54, 74, 0.25);
+            box-shadow: 0 0 40px var(--red-glow);
         }
 
         .service-card:hover::before {
@@ -902,7 +912,7 @@
         }
 
         .service-card a {
-            color: var(--primary);
+            color: var(--red-candy);
             font-weight: 600;
             font-size: 0.9rem;
             display: inline-flex;
@@ -912,6 +922,7 @@
 
         .service-card a:hover {
             gap: 10px;
+            color: var(--red-light);
         }
 
         /* ========================================
@@ -945,7 +956,7 @@
             transform: translateX(-50%);
             width: 100px;
             height: 100px;
-            background: radial-gradient(circle, rgba(234, 255, 0, 0.2), transparent);
+            background: radial-gradient(circle, rgba(212, 54, 74, 0.15), transparent);
             filter: blur(40px);
         }
 
@@ -997,9 +1008,9 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(234, 255, 0, 0.1), rgba(200, 255, 0, 0.1));
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
+            background: linear-gradient(135deg, rgba(212, 54, 74, 0.08), rgba(232, 101, 122, 0.06));
+            border-top: 1px solid rgba(212, 54, 74, 0.15);
+            border-bottom: 1px solid rgba(212, 54, 74, 0.15);
         }
 
         .cta-content {
@@ -1059,8 +1070,9 @@
         }
 
         .footer-column .btn-primary {
-            color: #000000;
+            color: #ffffff;
         }
+
         .btn-mobile-only {
             display: none;
         }
@@ -1100,7 +1112,7 @@
             transform: translateX(-50%);
             width: 800px;
             height: 400px;
-            background: radial-gradient(ellipse, rgba(234, 255, 0, 0.15), transparent);
+            background: radial-gradient(ellipse, rgba(212, 54, 74, 0.12), transparent);
             pointer-events: none;
         }
 
@@ -1220,7 +1232,7 @@
         textarea:focus {
             outline: none;
             border-color: var(--primary);
-            box-shadow: 0 0 0 4px rgba(234, 255, 0, 0.15);
+            box-shadow: 0 0 0 4px rgba(212, 54, 74, 0.15);
         }
 
         input::placeholder,
@@ -1310,11 +1322,11 @@
 
             0%,
             100% {
-                box-shadow: 0 0 20px rgba(234, 255, 0, 0.3);
+                box-shadow: 0 0 20px rgba(212, 54, 74, 0.3);
             }
 
             50% {
-                box-shadow: 0 0 40px rgba(234, 255, 0, 0.5);
+                box-shadow: 0 0 40px rgba(212, 54, 74, 0.5);
             }
         }
 
@@ -1337,6 +1349,7 @@
                 margin-top: 20px;
                 justify-content: center;
             }
+
             .logo {
                 font-size: 1.1rem;
             }
@@ -1436,10 +1449,10 @@
 
             .services-grid,
             .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 50px;
-        }
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                gap: 50px;
+            }
 
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -1666,10 +1679,10 @@
 
             /* Footer */
             .footer-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 50px;
-        }
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 1fr;
+                gap: 50px;
+            }
 
             .footer-column h4 {
                 margin-bottom: 12px;
@@ -1833,7 +1846,7 @@
                 padding: 60px 0;
             }
         }
-    
+
         @media (max-width: 992px) {
             .footer-content {
                 grid-template-columns: 1fr 1fr;
@@ -1851,6 +1864,188 @@
                 display: flex;
                 flex-direction: column;
             }
+        }
+
+        /* ========================================
+   HIGHLIGHT / PROFESSIONALS SECTION
+   ======================================== */
+
+        .highlight-section {
+            padding: 80px 0;
+            background: linear-gradient(180deg, rgba(212, 54, 74, 0.04) 0%, transparent 100%);
+            position: relative;
+        }
+
+        .highlight-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(21, 25, 34, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(212, 54, 74, 0.2);
+            border-radius: 20px;
+            padding: 50px 48px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--red-candy), var(--red-light));
+            border-radius: 2px;
+        }
+
+        .highlight-card .highlight-pretitle {
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            letter-spacing: 0.2em;
+            color: var(--red-candy);
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .highlight-card h2 {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .highlight-card .highlight-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .highlight-card .highlight-subtitle strong {
+            color: var(--text-white);
+        }
+
+        .highlight-card .highlight-body {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            max-width: 650px;
+            margin: 0 auto;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .highlight-card {
+                padding: 36px 24px;
+            }
+
+            .highlight-card h2 {
+                font-size: 1.5rem;
+            }
+
+            .highlight-card .highlight-subtitle {
+                font-size: 1rem;
+            }
+
+            .highlight-card .highlight-body {
+                font-size: 0.95rem;
+            }
+        }
+
+        /* ========================================
+   RED + WHITE SCOPED OVERRIDES
+   Applies candy apple red gradient-text to
+   specific sections while keeping others green
+   ======================================== */
+
+        /* Red gradient-text for specific sections */
+        .highlight-card .gradient-text,
+        .cta-section .gradient-text,
+        .stats-bar .gradient-text {
+            background: linear-gradient(135deg, var(--red-candy), var(--red-light), #ffffff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Hero outline button - red themed */
+        .btn-hero-outline {
+            border-color: var(--red-candy) !important;
+            color: #ffffff !important;
+        }
+
+        .btn-hero-outline:hover {
+            background: var(--red-candy) !important;
+            color: #ffffff !important;
+            border-color: var(--red-candy) !important;
+            box-shadow: 0 10px 30px rgba(212, 54, 74, 0.35) !important;
+        }
+
+        /* CTA glow button - red themed */
+        .cta-section .btn-primary {
+            background: linear-gradient(135deg, #D4364A, #E8657A, #ffffff);
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(212, 54, 74, 0.3);
+            font-weight: 700;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-section .btn-primary:hover {
+            box-shadow: 0 8px 30px rgba(212, 54, 74, 0.5);
+        }
+
+        .cta-section .glow-animate {
+            animation: red-glow-pulse 3s ease-in-out infinite;
+        }
+
+        @keyframes red-glow-pulse {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px rgba(212, 54, 74, 0.3);
+            }
+
+            50% {
+                box-shadow: 0 0 40px rgba(212, 54, 74, 0.5);
+            }
+        }
+
+        /* Header Join Now button - red themed */
+        .header-btn.btn-primary {
+            background: linear-gradient(135deg, #D4364A, #E8657A);
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(212, 54, 74, 0.3);
+        }
+
+        .header-btn.btn-primary:hover {
+            box-shadow: 0 8px 30px rgba(212, 54, 74, 0.4);
+        }
+
+        /* Mobile menu Join Now button - red themed */
+        .btn-mobile-only.btn-primary {
+            background: linear-gradient(135deg, #D4364A, #E8657A);
+            color: #ffffff;
+        }
+
+        /* Dropdown hover - red tinted */
+        .dropdown-menu a:hover {
+            background: rgba(212, 54, 74, 0.08) !important;
+            color: var(--red-candy) !important;
+        }
+
+        /* Footer View Brochure button - red themed */
+        .footer-column .btn-primary {
+            background: linear-gradient(135deg, #D4364A, #E8657A) !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 20px rgba(212, 54, 74, 0.3);
+        }
+
+        .footer-column .btn-primary:hover {
+            box-shadow: 0 8px 30px rgba(212, 54, 74, 0.4);
+            transform: translateY(-2px);
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -1908,6 +2103,26 @@
             <div class="scroll-indicator">
                 <i class="fas fa-chevron-down"></i>
                 <i class="fas fa-chevron-down" style="margin-top: -8px;"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- GET TRAINED BY PROFESSIONALS Highlight -->
+    <section class="highlight-section">
+        <div class="container">
+            <div class="highlight-card reveal">
+                <p class="highlight-pretitle"><i class="fas fa-star" style="margin-right: 6px;"></i> Since 1983</p>
+                <h2><span class="gradient-text">GET TRAINED BY PROFESSIONALS</span></h2>
+                <p class="highlight-subtitle">
+                    Personally Supervised & Managed by<br>
+                    <strong>Mr. India DARSHAN AURORA</strong> &<br>
+                    <strong>Qualified Physical Culturist SIDDHARTH AURORA</strong>
+                </p>
+                <p class="highlight-body">
+                    We would like to introduce ourselves as one of the most professional and dedicated health clubs,
+                    established since 1983 making the lives of thousands of people more healthier and happier through
+                    our commitment towards fitness in all these years.
+                </p>
             </div>
         </div>
     </section>
@@ -2047,15 +2262,15 @@
                         alt="Darshan Aurora">
                     <h3>Mr. Darshan Aurora</h3>
                     <p class="role">Founder & Director</p>
-                    <p>IBFF National Silver Medalist & Mr. India. 40+ years of expertise in fitness and bodybuilding.
-                    </p>
+                    <p>Mr. India · International Judge · 40+ years of expertise in fitness and bodybuilding.</p>
                 </div>
                 <div class="team-card reveal reveal-delay-1">
                     <img src="https://darshanhealth.club/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-02-at-20.25.38.jpeg"
                         alt="Siddharth Aurora">
                     <h3>Mr. Siddharth Aurora</h3>
-                    <p class="role">Director</p>
-                    <p>Leading the next generation of fitness excellence with modern training methodologies.</p>
+                    <p class="role">Director & Qualified Physical Culturist</p>
+                    <p>International Martial Arts Student of the Year 2004 · 2nd Degree American Black Belt · Health
+                        Club Management Certified.</p>
                 </div>
             </div>
         </div>
@@ -2073,7 +2288,7 @@
     </section>
 
     <!-- FOOTER -->
-        <footer>
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
@@ -2109,12 +2324,10 @@
                 </div>
                 <div class="footer-column">
                     <h4>Certification</h4>
-                    <p style="color: var(--text-muted); margin-bottom: 12px;">Officially recognized by fitness
-                        authorities</p>
-                    <div style="display: flex; gap: 12px; margin-top: 16px;">
-                        <img src="https://darshanhealth.club/wp-content/uploads/2025/10/expert-rating-certificate-1.jpg" alt="Certification"
-                            style="width: 100%; max-width: 120px; border: 1px solid var(--border); border-radius: 4px;">
-                    </div>
+                    <p style="color: var(--text-muted); margin-bottom: 12px;">Officially recognized by national and
+                        international fitness authorities</p>
+                    <a href="/about-3/#certifications" style="margin-top: 8px;"><i class="fas fa-certificate"></i> View
+                        our Certifications</a>
                 </div>
             </div>
             <div class="footer-bottom">
