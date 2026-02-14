@@ -22,6 +22,14 @@
             --bg-card-hover: #1d232e;
             --bg-elevated: #242b38;
 
+            /* Grey Palette */
+            --grey-charcoal: #1A1F2B;
+            --grey-slate: #232938;
+            --grey-medium: #2C3344;
+            --grey-light: #3A4256;
+            --grey-accent: #4A5368;
+            --grey-border: rgba(255, 255, 255, 0.1);
+
             /* Accent Colors - Candy Apple Red + White */
             --primary: #D4364A;
             --primary-light: #E8657A;
@@ -176,6 +184,16 @@
             max-width: 600px;
             margin: 0 auto;
             font-size: 1.1rem;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--grey-accent);
+            margin: 14px auto 0;
+            border-radius: 2px;
         }
 
         /* ========================================
@@ -795,7 +813,7 @@
             width: 10px;
             height: 10px;
             border-radius: 50%;
-            background: var(--border);
+            background: var(--grey-light);
             cursor: pointer;
             transition: var(--transition);
         }
@@ -810,10 +828,10 @@
    ======================================== */
 
         .stats-bar {
-            background: var(--bg-card);
+            background: var(--grey-charcoal);
             padding: 50px 0;
-            border-top: 1px solid rgba(212, 54, 74, 0.15);
-            border-bottom: 1px solid rgba(212, 54, 74, 0.15);
+            border-top: 1px solid var(--grey-border);
+            border-bottom: 1px solid var(--grey-border);
         }
 
         .stats-grid {
@@ -849,10 +867,10 @@
         }
 
         .service-card {
-            background: var(--bg-card);
+            background: var(--grey-charcoal);
             border-radius: 16px;
             overflow: hidden;
-            border: 1px solid var(--border);
+            border: 1px solid var(--grey-border);
             transition: var(--transition);
             position: relative;
         }
@@ -893,7 +911,7 @@
             left: 0;
             right: 0;
             height: 50%;
-            background: linear-gradient(to top, var(--bg-card), transparent);
+            background: linear-gradient(to top, var(--grey-charcoal), transparent);
         }
 
         .service-card-content {
@@ -938,11 +956,11 @@
         }
 
         .team-card {
-            background: var(--bg-card);
+            background: var(--grey-slate);
             border-radius: 16px;
             padding: 40px;
             text-align: center;
-            border: 1px solid var(--border);
+            border: 1px solid var(--grey-border);
             transition: var(--transition);
             position: relative;
             overflow: hidden;
@@ -962,7 +980,7 @@
 
         .team-card:hover {
             transform: translateY(-8px);
-            border-color: var(--border-hover);
+            border-color: var(--grey-light);
         }
 
         .team-card img {
@@ -1034,9 +1052,9 @@
    ======================================== */
 
         footer {
-            background: var(--bg-card);
+            background: var(--grey-charcoal);
             padding: 70px 0 30px;
-            border-top: 1px solid var(--border);
+            border-top: 1px solid var(--grey-border);
         }
 
         .footer-content {
@@ -1086,7 +1104,7 @@
         }
 
         .footer-bottom {
-            border-top: 1px solid var(--border);
+            border-top: 1px solid var(--grey-light);
             padding-top: 30px;
             text-align: center;
             color: var(--text-dim);
@@ -2318,7 +2336,7 @@
                         information</p>
                     <a href="https://darshanhealth.club/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-02-at-12.46.14.jpeg"
                         target="_blank" class="btn btn-primary"
-                        style="width: 100%; padding: 12px 24px; font-size: 0.9rem;">
+                        style="width: 100%; padding: 12px 24px; font-size: 0.9rem; color: #ffffff;">
                         <i class="fas fa-eye"></i> View Brochure
                     </a>
                 </div>
