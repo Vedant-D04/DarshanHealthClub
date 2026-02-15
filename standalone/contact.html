@@ -2037,6 +2037,18 @@
 
 
     <script>
+        // Sticky Header Effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (header) {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            }
+        });
+
         // Reveal Animations on Scroll
         const reveals = document.querySelectorAll('.reveal');
         const revealObserver = new IntersectionObserver((entries) => {
@@ -2048,6 +2060,38 @@
         }, { threshold: 0.1 });
 
         reveals.forEach(reveal => revealObserver.observe(reveal));
+
+        // Active Nav Link Highlight
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            if (link.getAttribute('href') === currentPath) {
+                link.classList.add('active');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                const icon = menuToggle.querySelector('i');
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.replace('fa-bars', 'fa-times');
+                } else {
+                    icon.classList.replace('fa-times', 'fa-bars');
+                }
+            });
+
+            // Close menu when a link is clicked
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                    menuToggle.querySelector('i').classList.replace('fa-times', 'fa-bars');
+                });
+            });
+        }
 
         // ========================================
         // 3D COVERFLOW CAROUSEL
