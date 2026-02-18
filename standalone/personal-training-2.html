@@ -35,6 +35,12 @@
             --font-heading: 'Bricolage Grotesque', sans-serif;
             --font-body: 'Figtree', sans-serif;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        
+            /* Red Theme Aliases */
+            --red-candy: #D4364A;
+            --red-deep: #B82E3F;
+            --red-light: #E8657A;
+            --red-glow: rgba(100, 100, 100, 0.25);
         }
 
         * {
@@ -429,6 +435,33 @@
                 flex-direction: column;
             }
         }
+
+        /* Red Button Overrides */
+        .header-btn.btn-primary {
+            background: linear-gradient(135deg, var(--red-candy), var(--red-light));
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(212, 54, 74, 0.3);
+        }
+
+        .header-btn.btn-primary:hover {
+            box-shadow: 0 8px 30px rgba(120, 120, 120, 0.4);
+        }
+
+        .btn-mobile-only.btn-primary {
+            background: linear-gradient(135deg, var(--red-candy), var(--red-light));
+            color: #ffffff;
+        }
+
+        .footer-column .btn-primary {
+            background: linear-gradient(135deg, var(--red-candy), var(--red-light)) !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 20px rgba(212, 54, 74, 0.3);
+        }
+
+        .footer-column .btn-primary:hover {
+            box-shadow: 0 8px 30px rgba(120, 120, 120, 0.4);
+            transform: translateY(-2px);
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -503,13 +536,14 @@
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-brand">
                     <a href="/home-2/" class="logo">
                         <img src="https://darshanhealth.club/wp-content/uploads/2026/02/WhatsApp_Image_2026-02-02_at_9.49.24_PM-removebg-preview-2.png"
-                            alt="DHC Logo">
+                            alt="DHC Logo" loading="lazy">
                         DARSHAN HEALTH CLUB
                     </a>
                     <p>Mumbai's premier fitness destination since 1983. Transform your body, elevate your life with

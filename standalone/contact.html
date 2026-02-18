@@ -21,6 +21,14 @@
             --bg-card-hover: #1d232e;
             --bg-elevated: #242b38;
 
+                        /* Grey Palette */
+            --grey-charcoal: #1A1F2B;
+            --grey-slate: #232938;
+            --grey-medium: #2C3344;
+            --grey-light: #3A4256;
+            --grey-accent: #4A5368;
+            --grey-border: rgba(255, 255, 255, 0.1);
+
             /* Accent Colors - Cult.fit Exact Palette */
             --primary: #D4364A;
             --primary-light: #E8657A;
@@ -31,6 +39,15 @@
             --gradient-start: #D4364A;
             --gradient-middle: #E8657A;
             --gradient-end: #ffffff;
+
+            
+            /* Red Theme Aliases */
+            --red-candy: #D4364A;
+            --red-deep: #B82E3F;
+            --red-light: #E8657A;
+            --red-glow: rgba(100, 100, 100, 0.25);
+            --red-gradient-start: #D4364A;
+            --red-gradient-end: #ffffff;
 
             /* Text Colors */
             --text-white: #ffffff;
@@ -1862,6 +1879,46 @@
                 display: flex;
                 flex-direction: column;
             }
+        }
+
+        /* ========================================
+           RED BUTTON OVERRIDES
+           Applies candy apple red to Join Now and View Brochure buttons
+           ======================================== */
+
+        /* Header Join Now button - red themed */
+        .header-btn.btn-primary {
+            background: linear-gradient(135deg, var(--red-candy), var(--red-light));
+            color: #ffffff;
+            box-shadow: 0 4px 20px rgba(212, 54, 74, 0.3);
+        }
+
+        .header-btn.btn-primary:hover {
+            box-shadow: 0 8px 30px rgba(120, 120, 120, 0.4);
+        }
+
+        /* Mobile menu Join Now button - red themed */
+        .btn-mobile-only.btn-primary {
+            background: linear-gradient(135deg, var(--red-candy), var(--red-light));
+            color: #ffffff;
+        }
+
+        /* Footer View Brochure button - red themed */
+        .footer-column .btn-primary {
+            background: linear-gradient(135deg, var(--red-candy), var(--red-light)) !important;
+            color: #ffffff !important;
+            box-shadow: 0 4px 20px rgba(212, 54, 74, 0.3);
+        }
+
+        .footer-column .btn-primary:hover {
+            box-shadow: 0 8px 30px rgba(120, 120, 120, 0.4);
+            transform: translateY(-2px);
+        }
+
+        /* Dropdown hover - red tinted */
+        .dropdown-menu a:hover {
+            background: rgba(60, 60, 60, 0.25) !important;
+            color: var(--red-candy) !important;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
