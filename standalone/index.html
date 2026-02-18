@@ -33,7 +33,7 @@
             /* Accent Colors - Candy Apple Red + White */
             --primary: #D4364A;
             --primary-light: #E8657A;
-            --primary-glow: rgba(212, 54, 74, 0.3);
+            --primary-glow: rgba(100, 100, 100, 0.3);
             --accent-mint: #D4364A;
             --accent-lime: #E8657A;
             --accent-yellow: #ffffff;
@@ -45,7 +45,7 @@
             --red-candy: #D4364A;
             --red-deep: #B82E3F;
             --red-light: #E8657A;
-            --red-glow: rgba(212, 54, 74, 0.25);
+            --red-glow: rgba(100, 100, 100, 0.25);
             --red-gradient-start: #D4364A;
             --red-gradient-end: #ffffff;
 
@@ -59,7 +59,7 @@
             /* Borders & Shadows */
             --border: rgba(255, 255, 255, 0.08);
             --border-hover: rgba(255, 255, 255, 0.15);
-            --glow: 0 0 40px rgba(212, 54, 74, 0.2);
+            --glow: 0 0 40px rgba(120, 120, 120, 0.25);
 
             /* Typography */
             --font-heading: 'Bricolage Grotesque', sans-serif;
@@ -98,8 +98,8 @@
             width: 100%;
             height: 100%;
             background:
-                radial-gradient(ellipse at 80% 20%, rgba(212, 54, 74, 0.04) 0%, transparent 50%),
-                radial-gradient(ellipse at 20% 80%, rgba(232, 101, 122, 0.03) 0%, transparent 50%);
+                radial-gradient(ellipse at 80% 20%, rgba(100, 100, 100, 0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 20% 80%, rgba(130, 130, 130, 0.03) 0%, transparent 50%);
             pointer-events: none;
             z-index: -1;
         }
@@ -276,7 +276,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: linear-gradient(90deg, var(--red-candy), var(--red-light));
+            background: linear-gradient(90deg, rgba(150, 150, 150, 0.6), rgba(200, 200, 200, 0.4));
             transition: var(--transition);
         }
 
@@ -330,7 +330,7 @@
         }
 
         .dropdown-menu a:hover {
-            background: rgba(212, 54, 74, 0.08);
+            background: rgba(60, 60, 60, 0.25);
             color: var(--primary) !important;
             padding-left: 30px;
         }
@@ -401,7 +401,7 @@
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, #D4364A, #E8657A);
+            background: linear-gradient(135deg, var(--red-candy), var(--red-light));
             color: #ffffff;
             font-weight: 600;
             box-shadow: 0 4px 20px rgba(212, 54, 74, 0.3);
@@ -417,7 +417,7 @@
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(212, 54, 74, 0.4);
+            box-shadow: 0 8px 30px rgba(120, 120, 120, 0.4);
         }
 
         .btn-outline {
@@ -427,9 +427,9 @@
         }
 
         .btn-outline:hover {
-            border-color: var(--primary);
+            border-color: rgba(150, 150, 150, 0.5);
             color: var(--text-white);
-            box-shadow: 0 0 20px rgba(212, 54, 74, 0.2);
+            box-shadow: 0 0 20px rgba(120, 120, 120, 0.2);
         }
 
         .btn-mobile-only {
@@ -505,11 +505,8 @@
             font-weight: 800;
             line-height: 0.95;
             margin-bottom: 8px;
-            background: linear-gradient(135deg, #D4364A 0%, #E8657A 40%, #ffffff 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 80px rgba(212, 54, 74, 0.3);
+            color: #E31B23;
+            text-shadow: 0 0 80px rgba(212, 54, 74, 0.4);
             letter-spacing: -0.02em;
             display: block;
         }
@@ -520,10 +517,7 @@
             font-weight: 700;
             letter-spacing: 0.1em;
             margin-top: 4px;
-            background: linear-gradient(135deg, #E8657A 0%, #ffffff 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #ffffff;
         }
 
         .hero-tagline {
@@ -608,7 +602,7 @@
             right: -20%;
             width: 80%;
             height: 150%;
-            background: radial-gradient(ellipse, rgba(212, 54, 74, 0.08) 0%, transparent 60%);
+            background: radial-gradient(ellipse, rgba(100, 100, 100, 0.06) 0%, transparent 60%);
             pointer-events: none;
         }
 
@@ -628,7 +622,7 @@
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: rgba(212, 54, 74, 0.1);
+            background: rgba(80, 80, 80, 0.2);
             border: 1px solid rgba(212, 54, 74, 0.3);
             color: var(--primary);
             padding: 8px 16px;
@@ -740,8 +734,8 @@
         .carousel-slide.active {
             z-index: 10;
             transform: translateX(0) scale(1.15);
-            box-shadow: 0 30px 60px rgba(212, 54, 74, 0.2);
-            border-color: var(--primary);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+            border-color: rgba(150, 150, 150, 0.4);
         }
 
         .carousel-slide.prev {
@@ -798,8 +792,8 @@
 
         .carousel-btn:hover {
             background: var(--primary);
-            border-color: var(--primary);
-            box-shadow: 0 0 20px rgba(212, 54, 74, 0.4);
+            border-color: rgba(150, 150, 150, 0.5);
+            box-shadow: 0 0 20px rgba(120, 120, 120, 0.4);
         }
 
         .carousel-dots {
@@ -820,7 +814,7 @@
 
         .carousel-dot.active {
             background: var(--primary);
-            box-shadow: 0 0 10px rgba(212, 54, 74, 0.5);
+            box-shadow: 0 0 10px rgba(120, 120, 120, 0.5);
         }
 
         /* ========================================
@@ -882,15 +876,15 @@
             left: 0;
             right: 0;
             height: 3px;
-            background: linear-gradient(90deg, var(--red-candy), var(--red-light));
+            background: linear-gradient(90deg, rgba(150, 150, 150, 0.6), rgba(200, 200, 200, 0.4));
             opacity: 0;
             transition: var(--transition);
         }
 
         .service-card:hover {
             transform: translateY(-8px);
-            border-color: rgba(212, 54, 74, 0.25);
-            box-shadow: 0 0 40px var(--red-glow);
+            border-color: rgba(150, 150, 150, 0.25);
+            box-shadow: 0 0 40px rgba(120, 120, 120, 0.3);
         }
 
         .service-card:hover::before {
@@ -974,7 +968,7 @@
             transform: translateX(-50%);
             width: 100px;
             height: 100px;
-            background: radial-gradient(circle, rgba(212, 54, 74, 0.15), transparent);
+            background: radial-gradient(circle, rgba(100, 100, 100, 0.15), transparent);
             filter: blur(40px);
         }
 
@@ -1026,9 +1020,9 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, rgba(212, 54, 74, 0.08), rgba(232, 101, 122, 0.06));
-            border-top: 1px solid rgba(212, 54, 74, 0.15);
-            border-bottom: 1px solid rgba(212, 54, 74, 0.15);
+            background: linear-gradient(135deg, rgba(60, 60, 60, 0.12), rgba(80, 80, 80, 0.08));
+            border-top: 1px solid rgba(212, 54, 74, 0.12);
+            border-bottom: 1px solid rgba(212, 54, 74, 0.12);
         }
 
         .cta-content {
@@ -1130,7 +1124,7 @@
             transform: translateX(-50%);
             width: 800px;
             height: 400px;
-            background: radial-gradient(ellipse, rgba(212, 54, 74, 0.12), transparent);
+            background: radial-gradient(ellipse, rgba(100, 100, 100, 0.12), transparent);
             pointer-events: none;
         }
 
@@ -1249,8 +1243,8 @@
         input:focus,
         textarea:focus {
             outline: none;
-            border-color: var(--primary);
-            box-shadow: 0 0 0 4px rgba(212, 54, 74, 0.15);
+            border-color: rgba(150, 150, 150, 0.5);
+            box-shadow: 0 0 0 4px rgba(120, 120, 120, 0.15);
         }
 
         input::placeholder,
@@ -1890,7 +1884,7 @@
 
         .highlight-section {
             padding: 80px 0;
-            background: linear-gradient(180deg, rgba(212, 54, 74, 0.04) 0%, transparent 100%);
+            background: linear-gradient(180deg, rgba(80, 80, 80, 0.06) 0%, transparent 100%);
             position: relative;
         }
 
@@ -1916,7 +1910,7 @@
             transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: linear-gradient(90deg, var(--red-candy), var(--red-light));
+            background: linear-gradient(90deg, rgba(150, 150, 150, 0.6), rgba(200, 200, 200, 0.4));
             border-radius: 2px;
         }
 
@@ -1999,12 +1993,12 @@
             background: var(--red-candy) !important;
             color: #ffffff !important;
             border-color: var(--red-candy) !important;
-            box-shadow: 0 10px 30px rgba(212, 54, 74, 0.35) !important;
+            box-shadow: 0 10px 30px rgba(120, 120, 120, 0.35) !important;
         }
 
         /* CTA glow button - red themed */
         .cta-section .btn-primary {
-            background: linear-gradient(135deg, #D4364A, #E8657A, #ffffff);
+            background: linear-gradient(135deg, var(--red-candy), var(--red-light));
             color: #ffffff;
             box-shadow: 0 4px 20px rgba(212, 54, 74, 0.3);
             font-weight: 700;
@@ -2012,7 +2006,7 @@
         }
 
         .cta-section .btn-primary:hover {
-            box-shadow: 0 8px 30px rgba(212, 54, 74, 0.5);
+            box-shadow: 0 8px 30px rgba(120, 120, 120, 0.5);
         }
 
         .cta-section .glow-animate {
@@ -2033,36 +2027,36 @@
 
         /* Header Join Now button - red themed */
         .header-btn.btn-primary {
-            background: linear-gradient(135deg, #D4364A, #E8657A);
+            background: linear-gradient(135deg, var(--red-candy), var(--red-light));
             color: #ffffff;
             box-shadow: 0 4px 20px rgba(212, 54, 74, 0.3);
         }
 
         .header-btn.btn-primary:hover {
-            box-shadow: 0 8px 30px rgba(212, 54, 74, 0.4);
+            box-shadow: 0 8px 30px rgba(120, 120, 120, 0.4);
         }
 
         /* Mobile menu Join Now button - red themed */
         .btn-mobile-only.btn-primary {
-            background: linear-gradient(135deg, #D4364A, #E8657A);
+            background: linear-gradient(135deg, var(--red-candy), var(--red-light));
             color: #ffffff;
         }
 
         /* Dropdown hover - red tinted */
         .dropdown-menu a:hover {
-            background: rgba(212, 54, 74, 0.08) !important;
+            background: rgba(60, 60, 60, 0.25) !important;
             color: var(--red-candy) !important;
         }
 
         /* Footer View Brochure button - red themed */
         .footer-column .btn-primary {
-            background: linear-gradient(135deg, #D4364A, #E8657A) !important;
+            background: linear-gradient(135deg, var(--red-candy), var(--red-light)) !important;
             color: #ffffff !important;
             box-shadow: 0 4px 20px rgba(212, 54, 74, 0.3);
         }
 
         .footer-column .btn-primary:hover {
-            box-shadow: 0 8px 30px rgba(212, 54, 74, 0.4);
+            box-shadow: 0 8px 30px rgba(120, 120, 120, 0.4);
             transform: translateY(-2px);
         }
     </style>
@@ -2076,7 +2070,7 @@
             <nav>
                 <a href="/home-2/" class="logo">
                     <img src="https://darshanhealth.club/wp-content/uploads/2026/02/WhatsApp_Image_2026-02-02_at_9.49.24_PM-removebg-preview-2.png"
-                        alt="DHC Logo">
+                        alt="DHC Logo" loading="eager">
                     DARSHAN HEALTH CLUB
                 </a>
                 <ul class="nav-links">
@@ -2155,27 +2149,28 @@
             <div class="carousel-container reveal">
                 <div class="carousel-track" id="carouselTrack">
                     <div class="carousel-slide" data-index="0">
-                        <img src="https://darshanhealth.club/wp-content/uploads/2026/01/reception-scaled.webp"
-                            alt="Reception Area">
+                        <img src="https://darshanhealth.club/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-18-at-11.29.13.jpeg"
+                            alt="Darshan Health Club" loading="eager">
                     </div>
                     <div class="carousel-slide" data-index="1">
-                        <img src="https://darshanhealth.club/wp-content/uploads/2026/01/dumbelrack-scaled.webp"
-                            alt="Dumbbell Rack">
-                    </div>
-                    <div class="carousel-slide" data-index="2">
-                        <img src="https://darshanhealth.club/wp-content/uploads/2026/01/equipment-scaled.webp"
-                            alt="Gym Equipment">
+                        <img src="https://darshanhealth.club/wp-content/uploads/2026/01/dumbelrack-scaled.jpg"
+                            alt="Dumbbell Rack" loading="lazy">
                     </div>
                     <div class="carousel-slide" data-index="3">
-                        <img src="https://darshanhealth.club/wp-content/uploads/2026/01/equipment2-scaled.webp"
-                            alt="Training Area">
+                        <img src="https://darshanhealth.club/wp-content/uploads/2026/01/equipment-scaled.jpg"
+                            alt="Gym Equipment" loading="lazy">
                     </div>
                     <div class="carousel-slide" data-index="4">
-                        <img src="https://darshanhealth.club/wp-content/uploads/2025/10/gym-06.webp" alt="Cardio Zone">
+                        <img src="https://darshanhealth.club/wp-content/uploads/2026/01/equipment2-scaled.jpg"
+                            alt="Training Area" loading="lazy">
                     </div>
                     <div class="carousel-slide" data-index="5">
-                        <img src="https://darshanhealth.club/wp-content/uploads/2025/10/gym-01.webp"
-                            alt="Weight Training">
+                        <img src="https://darshanhealth.club/wp-content/uploads/2025/10/gym-06.jpeg" alt="Cardio Zone"
+                            loading="lazy">
+                    </div>
+                    <div class="carousel-slide" data-index="6">
+                        <img src="https://darshanhealth.club/wp-content/uploads/2025/10/gym-01.jpeg"
+                            alt="Weight Training" loading="lazy">
                     </div>
                 </div>
                 <div class="carousel-controls">
@@ -2225,7 +2220,7 @@
             <div class="services-grid">
                 <div class="service-card reveal">
                     <div class="service-card-image"
-                        style="background-image: url('https://darshanhealth.club/wp-content/uploads/2026/01/reception-scaled.webp')">
+                        style="background-image: url('https://darshanhealth.club/wp-content/uploads/2026/01/reception-scaled.jpg')">
                     </div>
                     <div class="service-card-content">
                         <h3>Elite Gym</h3>
@@ -2235,7 +2230,7 @@
                 </div>
                 <div class="service-card reveal reveal-delay-1">
                     <div class="service-card-image"
-                        style="background-image: url('https://darshanhealth.club/wp-content/uploads/2025/10/gym-06.webp')">
+                        style="background-image: url('https://darshanhealth.club/wp-content/uploads/2025/10/gym-06.jpeg')">
                     </div>
                     <div class="service-card-content">
                         <h3>Cardio Center</h3>
@@ -2245,7 +2240,7 @@
                 </div>
                 <div class="service-card reveal reveal-delay-2">
                     <div class="service-card-image"
-                        style="background-image: url('https://darshanhealth.club/wp-content/uploads/2026/01/equipment2-scaled.webp')">
+                        style="background-image: url('https://darshanhealth.club/wp-content/uploads/2026/01/equipment2-scaled.jpg')">
                     </div>
                     <div class="service-card-content">
                         <h3>Personal Training</h3>
@@ -2255,7 +2250,7 @@
                 </div>
                 <div class="service-card reveal reveal-delay-3">
                     <div class="service-card-image"
-                        style="background-image: url('https://darshanhealth.club/wp-content/uploads/2026/01/reception-scaled.webp')">
+                        style="background-image: url('https://darshanhealth.club/wp-content/uploads/2026/01/reception-scaled.jpg')">
                     </div>
                     <div class="service-card-content">
                         <h3>Weight Management</h3>
@@ -2312,7 +2307,7 @@
                 <div class="footer-brand">
                     <a href="/home-2/" class="logo">
                         <img src="https://darshanhealth.club/wp-content/uploads/2026/02/WhatsApp_Image_2026-02-02_at_9.49.24_PM-removebg-preview-2.png"
-                            alt="DHC Logo">
+                            alt="DHC Logo" loading="lazy">
                         DARSHAN HEALTH CLUB
                     </a>
                     <p>Mumbai's premier fitness destination since 1983. Transform your body, elevate your life with
@@ -2323,10 +2318,12 @@
                     <h4>Visit Us</h4>
                     <p style="color: var(--text-muted); line-height: 1.6; margin-bottom: 12px;">
                         <i class="fas fa-map-marker-alt" style="color: var(--primary); margin-right: 8px;"></i>
-                        Darshan Health Club<br>
-                        <span style="margin-left: 20px;">Andheri West,</span><br>
-                        <span style="margin-left: 20px;">Mumbai, Maharashtra</span><br>
-                        <span style="margin-left: 20px;">India</span>
+                        9/10, JP Rd, Gharkul Society,<br>
+                        <span style="margin-left: 20px;">Manish Nagar, Four Bungalows,</span><br>
+                        <span style="margin-left: 20px;">Andheri West, Mumbai,</span><br>
+                        <span style="margin-left: 20px;">Maharashtra 400053</span><br>
+                        <span style="margin-left: 20px; font-size: 0.85em; color: var(--text-dim);">Landmark: Next to
+                            Four Bungalows DN Nagar Metro Station</span>
                     </p>
                     <a href="/contact-3/" style="margin-top: 8px;"><i class="fas fa-directions"></i> Get Directions</a>
                 </div>
